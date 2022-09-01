@@ -144,3 +144,12 @@ svg {
 .page__services {
   @include adaptiveValue("padding-bottom", 120, 0, 1920, 360, 1);
 }
+
+._mb0 {
+  margin-bottom: 0 !important;
+}
+
+._brb0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}

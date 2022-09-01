@@ -1,0 +1,251 @@
+.directions-from {
+  background-color: #333333;
+  border-radius: 0 0 rem(60) rem(60);
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 94, 36, 1920, 360, 1);
+  }
+
+  &__container {
+    @include adaptiveValue("padding-bottom", 42, 23, 1920, 360, 1);
+    padding-right: 0;
+  }
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: rem(20);
+    color: #fff;
+    &:not(:last-child) {margin-bottom: rem(5);}
+    @media (max-width:$mobile){
+      &:not(:last-child) {margin-bottom: rem(15);}
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 30, 36, 1920, 767, 1);
+  }
+
+  &__change {
+    display: inline-block;
+    font-weight: 500;
+    font-size: rem(14);
+    background-color: #43A400;
+    border-radius: rem(10);
+    padding: rem(7) rem(16);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: $greenLight;
+      }
+    }
+  }
+
+  &__body {
+  }
+
+  &__tariffs {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:$mobile){
+      &:not(:last-child) {margin-bottom: rem(20);}
+    }
+  }
+
+  &__triffnames {
+    margin-left: auto;
+    display: flex;
+    @include adaptiveValue("padding-right", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
+    &_top {
+      align-items: flex-end;
+    }
+    &_bottom {
+      align-items: flex-start;
+      @media (max-width:$mobile){
+        display: none;
+      }
+    }
+    @media (min-width:$mobile){
+      gap: rem(15);
+    }
+    @media (max-width:$mobile){
+      flex: 1 1 auto;
+    }
+  }
+
+  &__wrapper {
+    max-height: rem(550);
+    overflow: auto;
+    @include adaptiveValue("padding-right", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
+    @media (min-width:$mobile){
+      border-radius: rem(15) 0 0 rem(15);
+    }
+    @media (min-width:$mobile){
+      .simplebar-track {
+        background-color: #000;
+        border-radius: rem(10);
+      }
+      .simplebar-scrollbar,
+      .simplebar-scrollbar:before {
+        background-color: #43A400;
+        border-radius: rem(10);
+      }
+    }
+  }
+
+  &__more {
+    padding-left: rem(10);
+    margin-top: rem(15);
+    color: #76B72A;
+    line-height: math.div(23 , 16);
+    font-weight: 600;
+  }
+
+  &__table {
+  }
+
+  &__tariff {
+    color: #fff;
+    @media (min-width:$mobile){
+      .directions-from__triffnames_top & {
+        border-radius: rem(15) rem(15) 0 0;
+      }
+      .directions-from__triffnames_bottom & {
+        border-radius: 0 0 rem(15) rem(15);
+      }
+      min-width: rem(160);
+    }
+    @include adaptiveValue("font-size", 17, 12, 1920, 360, 1);
+    font-weight: 700;
+    padding: rem(5);
+    background: var(--tarifbg);
+    flex: 1 1 auto;
+    @media (max-width:$mobile){
+      flex: 0 1 calc(33.333% + rem(15));
+      border-radius: rem(10);
+      margin-left: rem(-15);
+      line-height: math.div(24 , 12);
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.table-directionsFrom {
+  overflow: hidden;
+
+  &__line {
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+    @media (min-width:$mobile){
+      grid-template-columns: rem(40) auto rem(510);
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: rem(24) auto;
+      border-radius: rem(15);
+      &:not(:last-child) {margin-bottom: rem(10);}
+      padding: rem(16);
+      column-gap: rem(14);
+      row-gap: rem(10);
+    }
+  }
+
+  &__icon {
+    padding-right: 0;
+    @media (min-width:$mobile){
+      padding: rem(16);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: rem(24);
+    @media (min-width:$mobile){
+      padding: rem(18);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__prices {
+    display: flex;
+    gap: rem(15);
+    align-self: stretch;
+    position: relative;
+    @media (max-width:$mobile){
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &__price {
+    // font-family: Roboto;
+    @media (min-width:$mobile){
+      font-size: rem(20);
+      cursor: pointer;
+      color: #fff;
+      background: var(--tarifbg);
+      &::before{
+        content:'';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--tarifbg);
+        opacity: 0.9;
+        transition: all 0.3s ease 0s;
+        transform: scaleX(0);
+      }
+      &_eco {
+        &::before{
+          transform-origin: left center;
+        }
+      }
+      &_stand {
+        &::before{
+          transform-origin: center center;
+        }
+      }
+      &_ext {
+        &::before{
+          transform-origin: right center;
+        }
+      }
+      &._active {
+        span {
+          position: relative;
+          z-index: 2;
+        }
+        &::before{
+          z-index: 1;
+          transform: none;
+        }
+      }
+    }
+    font-weight: 600;
+    flex: 0 1 33.333%;
+    display: flex;
+    justify-content:center;align-items: center;
+    @media (max-width:$mobile){
+      gap: rem(10);
+      transition: transform 0.3s ease 0s;
+      &._active {
+        transform: scale(1.3);
+      }
+      &::before{
+        content:'';
+        display: block;
+        width: rem(10);
+        height: rem(10);
+        flex: 0 0 rem(10);
+        border-radius: 50%;
+        background: var(--tarifbg);
+      }
+    }
+  }
+}

@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     })
   }
+
+  const directions = document.querySelector('.directions-from__body');
+  directions ? directionsActions(directions) : null;
 })
 
 
@@ -258,6 +261,39 @@ function yaMapsInit(yaMaps) {
           zoom: 14,
           controls: ['zoomControl']
       }, {});
+    })
+  }
+}
+
+function directionsActions(directions) {
+  const tariffNames = directions.querySelectorAll('[data-tariff-name]');
+  const tariffPrices = directions.querySelectorAll('[data-tariff-price]');
+  if (tariffNames.length && tariffPrices.length) {
+    document.addEventListener('click', (e)=>{
+      const target = e.target;
+      if (target.hasAttribute('data-tariff-price') || target.closest('[data-tariff-price]')) {
+        target.closest('[data-tariff-price]').classList.toggle('_active')
+      }
+      if (target.hasAttribute('data-tariff-name') || target.closest('[data-tariff-name]')) {
+        let tariffName = target.closest('[data-tariff-name]');
+        if (!tariffName.classList.contains('_checked')) {
+          tariffNames.forEach(tariffName=>{
+            tariffName.classList.remove('_checked');
+          })
+          tariffName.classList.add('_checked');
+          let tariffNameData = tariffName.getAttribute('data-tariff-name');
+          tariffPrices.forEach(tariffPrice=>{
+            tariffPrice.classList.remove('_active');
+            let tariffPriceData = tariffPrice.getAttribute('data-tariff-price');
+            tariffPriceData === tariffNameData ? tariffPrice.classList.add('_active') : null
+          })
+        } else {
+          tariffPrices.forEach(tariffPrice=>{
+            tariffName.classList.remove('_checked');
+            tariffPrice.classList.remove('_active');
+          })
+        }
+      }
     })
   }
 }
