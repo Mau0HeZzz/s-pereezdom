@@ -1,0 +1,155 @@
+//====================================================================================================
+.footer {
+  border-radius: rem(60);
+  background-color: $darkgrey;
+
+  &__container {
+    @include adaptiveValue("padding-bottom", 76, 50, 1920, 360, 1);
+    padding-top: rem(60);
+  }
+
+  &__body {
+    display: grid;
+    @include adaptiveValue("row-gap", 52, 30, 1920, 992, 1);
+    @media (min-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+    }
+    @media (max-width:$tablet){
+      justify-content: center;
+    }
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 55, 30, 1920, 360, 1);
+    }
+  }
+
+  &__row {
+    max-width: rem(550);
+    @media (max-width:$tablet){
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    color: #fff;
+    gap: rem(10);
+    font-size: rem(14);
+    line-height: 1.3;
+    * {
+      opacity: 0.5;
+      transition: opacity 0.3s ease 0s;
+    }
+    a {
+      @media (any-hover: hover){
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.logo-footer {
+  @media (max-width:$tablet){
+    order: 1;
+  }
+
+  &__link {
+  }
+}
+.socials-footer {
+  @media (max-width:$tablet){
+    order: 2;
+  }
+}
+.contacts-footer {
+  @media (max-width:$tablet){
+    order: 3;
+  }
+
+  &__address {
+    color: #fff;
+    @include adaptiveValue("font-size", 16, 14, 1920, 360, 1);
+    &:not(:last-child) {margin-bottom: rem(15);}
+  }
+}
+.spollers-footer {
+  @include adaptiveValue("gap", 140, 25, 1920, 992, 1);
+  display: flex;
+  color: #fff;
+  @media (max-width:$mobile){
+    flex-direction: column;
+  }
+  @media (max-width:$tablet){
+    order: 3;
+  }
+
+  &__item {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(18);
+  }
+
+  &__body {
+    padding: rem(20) 0;
+    li {
+      display: block;
+      &:not(:last-child) {margin-bottom: rem(10);}
+      a {
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover){
+          &:hover{
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+.tags-footer {
+  @media (max-width:$tablet){
+    order: 4;
+  }
+
+  &__head {
+    color: #fff;
+    @media (max-width:$tablet){
+      font-weight: 700;
+      font-size: rem(18);
+    }
+  }
+
+  &__body {
+    padding-top: rem(20);
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+    max-width: 100%;
+    overflow-x: auto;
+    @media (max-width:$tablet){
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    padding: rem(8) rem(18);
+    color: #fff;
+    background-color: $green;
+    border-radius: rem(15);
+    line-height: 1.5;
+    transition: background-color 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: $greenLight;
+      }
+    }
+  }
+}
+
+//====================================================================================================

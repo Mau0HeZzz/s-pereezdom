@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Контакты"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page__contacts">
+        <div class="breadcumps">
+          <div class="breadcumps__container">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+        </div>
+        <div class="head-contacts">
+          <div class="head-contacts__container">
+            <h1 class="head-contacts__title">Контакты</h1>
+          </div>
+        </div>
+        <section class="callback-home">
+          <div class="callback-home__container">
+            <div class="callback-home__body callback-home__body_contacts">
+              <div class="callback-home__text">
+                <h2 class="callback-home__title callback-home__title_thin">Наш головной офис находится в Энгельсе, но мы организуем перевозки из любого города России!</h2>
+                  <p class="callback-home__paragraph">Россия, Саратовская область, г. Энгельс, 
+                    ул. Демократическая, д.1, офис 201/1</p>
+                <div class="callback-home__phones">
+                  <img src="@img/home_callback_icon.svg" alt="image" class="callback-home__icon _md3dn">
+                  <img src="@img/header_time.svg" alt="image" class="callback-home__icon callback-home__icon_mobile">
+                  <div>
+                    <a href="#" class="callback-home__link _roboto _roboto_regular">8 (800) 301-47-97</a>
+                    <a href="#" class="callback-home__link _roboto _roboto_regular">8 (969) 777-83-97</a>
+                  </div>
+                </div>
+                <div class="callback-home__time">Ежедневно c <span class="_roboto __roboto_regular">8:00</span> до <span class="_roboto __roboto_regular">21:00</span>, </div>
+              </div>
+              <form data-ajax action="#" method="post" class="callback-home__form">
+                <div class="callback-home__writeus">Напишите нам</div>
+                <input type="text" data-required placeholder="Имя" class="callback-home__input">
+                <input type="tel" data-required placeholder="+7 (000) 000-00-00" data-inputmask="'alias':'+7 (999) 999-99-99'" class="callback-home__input _roboto">
+                <div class="callback-home__agree">
+                  <input data-required type="checkbox" id="callback-home__checkbox" class="callback-home__checkbox">
+                  <label for="callback-home__checkbox" class="callback-home__label">Даю согласие на обработку <br> 
+                    персональных данных</label>
+                </div>
+                <button type="submit" class="callback-home__submit _redgrad">Заказать</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="info-contacts">
+          <div class="info-contacts__container">
+            <div class="info-contacts__map map-contacts">
+              <div class="map-contacts__map" data-map data-center="51.504201, 46.112482"></div>
+            </div>
+            <div data-copy-parent class="info-contacts__requizits requizits-infoContacts">
+              <div class="requizits-infoContacts__head">
+                <h2 class="requizits-infoContacts__title">Реквизиты</h2>
+                <i data-copy data-tippy-content="Текст скопирован в буфер обмена" class="requizits-infoContacts__icon">
+                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.6668 21.833H8.00016C7.29292 21.833 6.61464 21.5521 6.11454 21.052C5.61445 20.5519 5.3335 19.8736 5.3335 19.1663V8.49967C5.3335 7.79243 5.61445 7.11415 6.11454 6.61406C6.61464 6.11396 7.29292 5.83301 8.00016 5.83301H18.6668C19.3741 5.83301 20.0523 6.11396 20.5524 6.61406C21.0525 7.11415 21.3335 7.79243 21.3335 8.49967V11.1663M13.3335 27.1663H24.0002C24.7074 27.1663 25.3857 26.8854 25.8858 26.3853C26.3859 25.8852 26.6668 25.2069 26.6668 24.4997V13.833C26.6668 13.1258 26.3859 12.4475 25.8858 11.9474C25.3857 11.4473 24.7074 11.1663 24.0002 11.1663H13.3335C12.6263 11.1663 11.948 11.4473 11.4479 11.9474C10.9478 12.4475 10.6668 13.1258 10.6668 13.833V24.4997C10.6668 25.2069 10.9478 25.8852 11.4479 26.3853C11.948 26.8854 12.6263 27.1663 13.3335 27.1663Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </i>
+              </div>
+              <div class="requizits-infoContacts__label">Общество с ограниченной ответственностью 
+                «С Переездом!»</div>
+              <div class="requizits-infoContacts__item">
+                <p class="requizits-infoContacts__paragraph">Саратовская область, г. Энгельс, <br>
+                  ул. Демократическая, д.1, офис 201/1</p>
+              </div>
+              <div class="requizits-infoContacts__item">
+                <h6 class="requizits-infoContacts__subtitle">Юридический адрес:</h6>
+                <p class="requizits-infoContacts__paragraph">Саратовская область, г. Энгельс</p>
+              </div>
+              <div class="requizits-infoContacts__item">
+                <h6 class="requizits-infoContacts__subtitle">Почтовый адрес:</h6>
+                <p class="requizits-infoContacts__paragraph">413100 Саратовская область, г. Энгельс
+                  ул. Демократическая, д.1, офис 201/1</p>
+                <p class="requizits-infoContacts__paragraph">ИНН: 6449095150</p>
+                <p class="requizits-infoContacts__paragraph">КПП: 644901001</p>
+                <p class="requizits-infoContacts__paragraph">ОГРН: 1196451020710</p>
+              </div>
+              <div class="requizits-infoContacts__item">
+                <h6 class="requizits-infoContacts__subtitle">Телефон:</h6>
+                <p class="requizits-infoContacts__paragraph"><a href="#">8 (800) 301-47-97</a><a href="#">8 (495) 021-77-97</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	</body>
+</html>

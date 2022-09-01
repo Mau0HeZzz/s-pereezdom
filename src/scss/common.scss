@@ -1,0 +1,146 @@
+// Заголовки, общие БЄМ блоки и проче...
+._md3dn {
+  @media (max-width:$mobile){
+    display: none;
+  }
+}
+._md4dn {
+  @media (max-width:$mobileSmall){
+    display: none;
+  }
+}
+
+[hidden] {
+  display: none !important;
+}
+
+._ontop {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  width: rem(60);
+  height: rem(60);
+  display: flex;
+  justify-content:center;align-items: center;
+  border-radius: 50%;
+  background-color: $green;
+  opacity: 0;
+  transform: translateY(100%);
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  &._active {
+    visibility: visible;
+    transform: none;
+    opacity: 1;
+    z-index: 90;
+  }
+  @media (max-width:$mobile){
+    display: none;
+  }
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+.title-leaf {
+  @include adaptiveValue("font-size", 36, 30, 1920, 480, 1);
+  font-weight: 700;
+  @media (min-width:$mobile){
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    color: #666666;
+    &:not(._noleaf)::before{
+      content:'';
+      display: block;
+      width: rem(40);
+      height: rem(40);
+      flex: 0 0 rem(40);
+      background: url(../img/home_title.svg) center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+._redgrad {
+  background: $redgrad;
+}
+
+._mmd3dn {
+  @media (min-width:$mobile){
+    display: none !important;
+  }
+}
+
+._mmd2dn {
+  @media (min-width:$tablet){
+    display: none !important;
+  }
+}
+
+._jcsb {
+  justify-content: space-between !important;
+}
+
+.breadcumps {
+  @media (max-width:$mobile){
+    display: none;
+  }
+
+  &__container {
+    padding-bottom: rem(25);
+    ul {
+      display: flex;
+      li {
+        padding: rem(3) rem(10);
+        color: #999;
+        font-size: rem(12);
+        a {
+          transition: color 0.3s ease 0s;
+          display: flex;
+          align-items: center;
+          gap: rem(10);
+          @media (any-hover: hover){
+            &:hover{
+              color: $green;
+              &::after{
+                border-color: $green;
+              }
+            }
+          }
+          &::after{
+            content:'';
+            display: block;
+            width: rem(8);
+            height: rem(8);
+            border-bottom: rem(2) solid #999;
+            border-right: rem(2) solid #999;
+            transform: rotate(-45deg);
+            transition: all 0.3s ease 0s;
+          }
+        }
+      }
+    }
+  }
+}
+
+._md3dn {
+  @media (max-width:$mobile){
+    display: none !important;
+  }
+}
+
+._roboto {
+  font-family: Roboto;
+  &_regular {
+    font-weight: 400;
+  }
+}
+
+.page__services {
+  @include adaptiveValue("padding-bottom", 120, 0, 1920, 360, 1);
+}

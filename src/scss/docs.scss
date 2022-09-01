@@ -1,0 +1,114 @@
+.tabs-docs {
+  @include adaptiveValue("padding-bottom", 125, 94, 1920, 480, 1);
+
+  &__container {
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: rem(15);
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding-bottom: rem(10);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 50, 30, 1920, 480, 1);
+  }
+
+  &__subtitle {
+    color: #666;
+    font-size: rem(20);
+    @media (max-width:$mobile){
+      display: none;
+    }
+  }
+
+  &__content {
+  }
+
+  &__item {
+  }
+}
+
+:root {
+  @include adaptiveValue("--docsSize", 599, 330, 1920, 360, 1);
+}
+
+.item-tabsDocs {
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 40, 20, 1920, 480);
+  }
+
+  &__body {
+    display: grid;
+    @include adaptiveValue("row-gap", 30, 15, 1920, 360, 1);
+    @include adaptiveValue("column-gap", 60, 0, 1920, 360, 1);
+    justify-content: center;
+    @media (min-width:$mobile){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__link {
+    box-shadow: 0px rem(15) rem(60) rgba(0, 0, 0, 0.05);
+    border-radius: rem(15);
+    @include adaptiveValue("padding", 24, 16, 1920, 767, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 10, 15, 1920, 767, 1);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        box-shadow: 0px rem(15) rem(60) rgba(0, 0, 0, 0.15);
+      }
+    }
+    @media (any-hover: none){
+      box-shadow: 0px rem(15) rem(60) rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__icon {
+    @include adaptiveValue("max-width", 42, 36, 1920, 767, 1);
+  }
+
+  &__name {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    font-weight: 600;
+    @include adaptiveValue("font-size", 20, 16, 1920, 767, 1);
+    @media (max-width:$mobile){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__size {
+    color: #999;
+    @include adaptiveValue("font-size", 14, 11, 1920, 767, 1);
+    white-space: nowrap;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: #666;
+    font-size: rem(20);
+    @include adaptiveValue("padding-left", 20, 0, 1920, 767, 1);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 15, 1920, 480, 1);
+    }
+  }
+}
