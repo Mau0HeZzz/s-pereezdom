@@ -387,6 +387,76 @@ function initSliders() {
 			}
 		});
 	}
+
+	const reviewsSliders =document.querySelectorAll('[data-review-slider]');
+	if (reviewsSliders.length) {
+		reviewsSliders.forEach(reviewsSlider=>{
+			let centeredSlides = reviewsSlider.dataset.centeredSlides === '1' ? true : false;
+			new Swiper(reviewsSlider, { // Указываем скласс нужного слайдера
+				// Подключаем модули слайдера
+				// для конкретного случая
+				modules: [Pagination],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 2.3,
+				spaceBetween: 45,
+				speed: 800,
+				centeredSlides: centeredSlides,
+				//touchRatio: 0,
+				//simulateTouch: false,
+				loop: false,
+				//preloadImages: false,
+				//lazy: true,
+				/*
+				// Эффекты
+				effect: 'fade',
+				*/
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+
+				// Скроллбар
+				/*
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					draggable: true,
+				},
+				*/
+
+				// Кнопки "влево/вправо"
+				// navigation: {
+				// 	prevEl: '.hero-home__arrow_prev',
+				// 	nextEl: '.hero-home__arrow_next',
+				// },
+
+				// Брейкпоинты
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 60,
+					},
+					1290: {
+						slidesPerView: 4,
+						spaceBetween: 76,
+					},
+				},
+				// События
+				on: {
+
+				}
+			});
+			
+		})
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

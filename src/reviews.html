@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Услуги"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page__reviews">
+        <div class="breadcumps">
+          <div class="breadcumps__container">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li>Отзывы</li>
+            </ul>
+          </div>
+        </div>
+        <section class="sliders-reviews">
+          <div class="sliders-reviews__container">
+            <div class="sliders-reviews__head">
+              <h1 class="sliders-reviews__title">Отзывы</h1>
+              <div class="sliders-reviews__like">
+                <div class="reviews-home__like">
+                  <img src="@img/home_reviews_like.svg" alt="image">
+                  <span>+45</span>
+                </div>
+              </div>
+            </div>
+            <div class="sliders-reviews__body">
+              <div data-review-slider data-centered-slides class="sliders-reviews__slider swiper">
+                <div class="sliders-reviews__wrapper swiper-wrapper">
+                  <div class="sliders-reviews__slide swiper-slide"></div>
+                </div>
+              </div>
+              <div data-review-slider data-centered-slides="1" class="sliders-reviews__slider swiper">
+                <div class="sliders-reviews__wrapper swiper-wrapper">
+                  <div class="sliders-reviews__slide swiper-slide"></div>
+                </div>
+              </div>
+              <div data-review-slider data-centered-slides="0" class="sliders-reviews__slider swiper">
+                <div class="sliders-reviews__wrapper swiper-wrapper">
+                  <div class="sliders-reviews__slide swiper-slide"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- animBlockkkkkkk -->
+
+
+        
+      <section class="services-home services-home_about">
+        <div class="services-home__container">
+          <div class="services-home__head">
+            <h3 class="about-subtitle">Что мы предлагаем</h3>
+          </div>
+          <div class="services-home__body swiper">
+            <div class="services-home__wrapper swiper-wrapper">
+              <div class="services-home__item item-servicesHome swiper-slide">
+                <img class="item-servicesHome__image" src="@img/home_services_2.png" alt="image">
+                <div class="item-servicesHome__body">
+                  <a href="#" class="item-servicesHome__title">Квартирный переезд с грузчиками по РФ</a>
+                  <p class="item-servicesHome__text">Перевозка одной вещи 1800 рублей. 3990 рублей за мини переезд (до двух часов). Аренда тары и упаковки на время переезда. Грузчики РФ. </p>
+                  <div class="item-servicesHome__foot">
+                    <div class="item-servicesHome__count">120 переездов</div>
+                    <a href="#" class="item-servicesHome__more">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="services-home__item item-servicesHome swiper-slide">
+                <img class="item-servicesHome__image" src="@img/home_services_2.png" alt="image">
+                <div class="item-servicesHome__body">
+                  <a href="#" class="item-servicesHome__title">Квартирный переезд с грузчиками по РФ</a>
+                  <p class="item-servicesHome__text">Перевозка одной вещи 1800 рублей. 3990 рублей за мини переезд (до двух часов). Аренда тары и упаковки на время переезда. Грузчики РФ. </p>
+                  <div class="item-servicesHome__foot">
+                    <div class="item-servicesHome__count">120 переездов</div>
+                    <a href="#" class="item-servicesHome__more">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="services-home__item item-servicesHome swiper-slide">
+                <img class="item-servicesHome__image" src="@img/home_services_2.png" alt="image">
+                <div class="item-servicesHome__body">
+                  <a href="#" class="item-servicesHome__title">Квартирный переезд с грузчиками по РФ</a>
+                  <p class="item-servicesHome__text">Перевозка одной вещи 1800 рублей. 3990 рублей за мини переезд (до двух часов). Аренда тары и упаковки на время переезда. Грузчики РФ. </p>
+                  <div class="item-servicesHome__foot">
+                    <div class="item-servicesHome__count">120 переездов</div>
+                    <a href="#" class="item-servicesHome__more">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="services-home__pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="info-services">
+        <div class="info-services__container">
+          <div class="info-services__phones">
+            <div class="info-services__icon">
+              <img src="@img/header_time.svg" alt="image">
+            </div>
+            <div class="info-services__item">
+              <a href="#" class="info-services__link info-services__link_bold _roboto">8 (800) 301-47-97</a>
+              <span class="info-services__time">c 8:00 до 21:00, ежедневно</span>
+            </div>
+            <div class="info-services__item">
+              <a href="#" class="info-services__link _roboto _roboto_regular">8 (969) 777-83-97</a>
+            </div>
+          </div>
+          <div class="info-services__bid">
+            <a href="#" class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+              <div class="item-whiteHeader__icon">
+                <img src="@img/header_calc.svg" alt="image">
+              </div>
+              <div class="item-whiteHeader__body">Оставить заявку</div>
+            </a>
+          </div>
+        </div>
+      </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
