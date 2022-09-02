@@ -869,8 +869,12 @@
     color: #EEFFA2;
     border-radius: rem(20);
     position: relative;
+    max-width: 85%;
     img {
       max-width: rem(56);
+    }
+    @media (max-width:$mobile){
+      font-size: rem(18);
     }
     @media (any-hover: hover){
       &:hover{
@@ -920,6 +924,13 @@
 .tariffs-home {
   position: relative;
 
+  &_solo {
+    padding-top: rem(35);
+    @include adaptiveValue("border-top-left-radius", 60, 30, 1920, 767, 1);
+    @include adaptiveValue("border-top-right-radius", 60, 30, 1920, 767, 1);
+    overflow: hidden;
+  }
+
   &__container {
   }
 
@@ -958,6 +969,17 @@
       top: 0;
       width: 50%;
       background-color: #333;
+    }
+    .tariffs-home_solo & {
+      &::before,
+      &::after{
+        background: linear-gradient(180deg, #678E05 11.88%, #333333 49.97%);
+        background-repeat: no-repeat;
+        background-color: #333;
+      }
+      &::before{
+        background-size: 100% 75%;
+      }
     }
     &::before{
       height: 70%;

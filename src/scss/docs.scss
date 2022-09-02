@@ -15,6 +15,18 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 30, 20);
     }
+    [data-tabs-titles] {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: rem(15);
+      button {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+    }
   }
 
   &__title {
@@ -25,6 +37,11 @@
   &__subtitle {
     color: #666;
     font-size: rem(20);
+    transition: all 0.3s ease 0s;
+    &._tab-active {
+      font-weight: 700;
+      color:#000;
+    }
     @media (max-width:$mobile){
       display: none;
     }

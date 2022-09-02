@@ -9,6 +9,11 @@
     display: none;
   }
 }
+._md2dn {
+  @media (max-width:$tablet){
+    display: none !important;
+  }
+}
 
 [hidden] {
   display: none !important;
@@ -128,11 +133,6 @@ svg {
   }
 }
 
-._md3dn {
-  @media (max-width:$mobile){
-    display: none !important;
-  }
-}
 
 ._roboto {
   font-family: Roboto;

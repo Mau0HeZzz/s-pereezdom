@@ -115,6 +115,7 @@ body {
     max-width: rem(1290);
     box-sizing: content-box;
     margin: 0 auto;
+    padding-right: 0;
     @include adaptiveValue("padding-left", 60, 15, 1920, 767, 1);
 	}
 } @else {
@@ -167,3 +168,5 @@ body {
 @import "docs";
 @import "about";
 @import "from";
+@import "calc";
+@import "employees";
