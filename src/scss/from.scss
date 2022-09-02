@@ -259,7 +259,7 @@
 //========================================================================================================================================================
 
 .callback-from {
-  &:not(:last-child) {margin-bottom: rem(86);}
+  margin-bottom: rem(86);
 
   &__container {
   }
@@ -267,6 +267,8 @@
   &__content {
     @include adaptiveValue("padding-top", 70, 40, 1920, 767, 1);
     @include adaptiveValue("padding-bottom", 70, 50, 1920, 767, 1);
+    padding-left: rem(17);
+    padding-right: rem(17);
     display: flex;
     flex-direction: column;
     align-items: center;
