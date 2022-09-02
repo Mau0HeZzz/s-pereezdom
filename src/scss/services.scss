@@ -82,6 +82,12 @@
     @include adaptiveValue("gap", 157, 25, 1920, 480, 1);
     @media (max-width:$mobile){
       flex-direction: column;
+      max-width: calc(100vw - rem(30));
+      padding: rem(16) rem(23) rem(30);
+      margin: 0 auto;
+      box-shadow: 0px rem(15) rem(60) rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+      border-radius: rem(15);
     }
   }
 
@@ -126,6 +132,9 @@
       border-radius: rem(20);
       @media (min-width:$mobile){
         padding: rem(16);
+      }
+      @media (max-width:$mobile){
+        background: #43A300 !important;
       }
       img,
       .item-whiteHeader__icon {
@@ -299,6 +308,7 @@
   }
   p {
     font-size: rem(18);
+    line-height: math.div(27 , 18);
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 24, 15, 1920, 480, 1);
     }

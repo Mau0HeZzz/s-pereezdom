@@ -39,10 +39,10 @@
 .map-contacts {
   border-radius: rem(60) rem(60) rem(60) 0px;
   overflow: hidden;
+  display: flex;
 
   &__map {
     width: 100%;
-    height: 100%;
   }
 }
 .requizits-infoContacts {

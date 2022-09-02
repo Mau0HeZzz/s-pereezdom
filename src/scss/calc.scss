@@ -77,6 +77,9 @@
   padding: rem(32) rem(35);
   flex: 1 0 65%;
   border: 1px solid #F1F1F1;
+  @media (min-width:$mobile){
+    border-radius: rem(30);
+  }
 
   &__item {
     display: flex;

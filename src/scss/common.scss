@@ -1,7 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 ._md3dn {
   @media (max-width:$mobile){
-    display: none;
+    display: none !important;
   }
 }
 ._md4dn {
@@ -152,4 +152,14 @@ svg {
 ._brb0 {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+._md3bgn {
+  @media (max-width:$mobile){
+    background: none !important;
+    *::before,
+    *::after {
+      background: none !important;
+    }
+  }
 }
