@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Калькулятор"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page__calc">
+        <div class="breadcumps">
+          <div class="breadcumps__container">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li>Калькулятор</li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-calc">
+          <div class="main-calc__container">
+            <div class="main-calc__head">
+              <h1 class="main-calc__title">Калькулятор</h1>
+            </div>
+            <div class="main-calc__body">
+              <div class="main-calc__calc calc-mainCalc">
+                <div class="calc-mainCalc__item">
+                  <form action="#" data-ajax method="post" class="calc-mainCalc__form">
+                    <div class="calc-mainCalc__content">
+                      <div class="calc-mainCalc__row">
+                        <div class="calc-mainCalc__icon">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <span class="calc-mainCalc__grey">Вы в </span>
+                        <span class="calc-mainCalc__black">Екатеренбурге</span>
+                        <a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+                      </div>
+                      <div class="calc-mainCalc__row">
+                        <div class="calc-mainCalc__icon">
+                          <svg width="2" height="60" viewBox="0 0 2 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1" y1="4.37114e-08" x2="0.999997" y2="60" stroke="#999999" stroke-width="2"/>
+                          </svg>
+                        </div>
+                        <div class="calc-mainCalc__grey">Везем - </div>
+                        <div class="calc-mainCalc__select">
+                          <select data-scroll="250">
+                            <option value="1" selected>Квартира</option>
+                            <option value="2">Дом</option>
+                            <option value="3">Сад</option>
+                            <option value="4">Огород</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="calc-mainCalc__row">
+                        <div class="calc-mainCalc__icon">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div class="calc-mainCalc__grey">Город - </div>
+                        <div class="calc-mainCalc__select">
+                          <select data-search data-scroll="250">
+                            <option value="" selected>Выбрать город</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Питер</option>
+                            <option value="4">Казахстан</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Питер</option>
+                            <option value="4">Казахстан</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Питер</option>
+                            <option value="4">Казахстан</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Питер</option>
+                            <option value="4">Казахстан</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Питер</option>
+                            <option value="4">Казахстан</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Питер</option>
+                            <option value="4">Казахстан</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="calc-mainCalc__button">
+                    <button type="submit" class="white-header__item item-whiteHeader item-whiteHeader_calc">
+                      <div class="item-whiteHeader__icon">
+                        <img src="@img/header_calc.svg" alt="image">
+                      </div>
+                      <div class="item-whiteHeader__body">Расчитать <span>стоимость</span></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="calc-mainCalc__item">
+                  <div class="calc-mainCalc__statuses">
+                    <div class="calc-mainCalc__status">
+                      <div class="calc-mainCalc__image"></div>
+                      <div class="calc-mainCalc__label"></div>
+                      <div class="calc-mainCalc__number"></div>
+                    </div>
+                    <div class="calc-mainCalc__status">
+                      <div class="calc-mainCalc__image"></div>
+                      <div class="calc-mainCalc__label"></div>
+                      <div class="calc-mainCalc__number"></div>
+                    </div>
+                    <div class="calc-mainCalc__status">
+                      <div class="calc-mainCalc__image"></div>
+                      <div class="calc-mainCalc__label"></div>
+                      <div class="calc-mainCalc__number"></div>
+                    </div>
+                  </div>
+                  <div class="calc-mainCalc__button"></div>
+                </div>
+              </div>
+              <div class="main-calc__important">
+                <div class="important-calc">
+                  <div class="important-calc__container">
+                    <div class="important-calc__content">
+                      <div class="important-calc__head">
+                        <h5 class="important-calc__title">Важная Информация!</h5>
+                      </div>
+                      <div class="important-calc__body">
+                        <p>Автоматический расчет на нашем сайте показывает ориентировочные ставки и не является публичной офертой! Точная стоимость рейса рассчитывается специалистом индивидуально. Просим отнестись с пониманием и не ругаться на наших менеджеров, если они назовут Вам цену, которая отличается от увиденной Вами на сайте.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="tariffs-home tariffs-home_solo">
+          <div class="tariffs-home__container">
+            <div class="tariffs-home__head">
+              <h2 class="tariffs-home__title title-leaf">Выберите тариф</h2>
+            </div>
+            <div class="tariffs-home__body">
+              <div class="tariffs-home__item item-tariffsHome" style="--tariffColor: #666666;">
+                <div class="item-tariffsHome__title">Эконом</div>
+                <div class="item-tariffsHome__body">
+                  <div class="item-tariffsHome__icon">
+                    <img src="@img/home_tariffs_truck.svg" alt="image">
+                  </div>
+                  <div class="spollers-tariffsHome__mobtitle">Эконом</div>
+                  <div class="item-tariffsHome__price _roboto">от 9 100 руб.</div>
+                  <div class="item-tariffsHome__advantages">
+                    <div data-tariffs class="spollers-tariffsHome">
+                      <div class="spollers-tariffsHome__item">
+                        <button data-tariff-button="Эконом" type="button" class="spollers-tariffsHome__title">
+                          <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 1L8 8L1 1" stroke="url(#paint0_linear_525_6793)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_525_6793" x1="1" y1="8" x2="15" y2="8" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF7E01"/>
+                            <stop offset="1" stop-color="#FF3100"/>
+                            </linearGradient>
+                            </defs>
+                          </svg>
+                          <span>Показать приемущества</span>
+                        </button>
+                        <div data-tariff="Эконом" data-da=".wrapper,992, last" class="spollers-tariffsHome__bg" style="--tariffColor: #666666;"></div>
+                        <div data-tariff="Эконом" data-da=".wrapper,992, last" class="spollers-tariffsHome__body" style="--tariffColor: #666666;">
+                          <div class="spollers-tariffsHome__mobile">
+                            <div class="spollers-tariffsHome__close"></div>
+                            <div class="spollers-tariffsHome__mobtitle">Эконом</div>
+                            <div class="spollers-tariffsHome__mobprice _roboto">от 9 100 руб.</div>
+                          </div>
+                          <div class="spollers-tariffsHome__little">В стоимость входит:</div>
+                          <ul class="spollers-tariffsHome__list">
+                            <li class="spollers-tariffsHome__li">Доставка «подъезд - подъезд»</li>
+                            <li class="spollers-tariffsHome__li">Помощь в оценке объема груза</li>
+                            <li class="spollers-tariffsHome__li">Ответственность за сохранность груза</li>
+                            <li class="spollers-tariffsHome__li">Возможность оплаты на выгрузке</li>
+                            <li class="spollers-tariffsHome__li">Погрузка в любое время 24/7</li>
+                          </ul>
+                          <div class="spollers-tariffsHome__label">
+                            <img src="@img/home_tariffs_person.svg" alt="image">
+                            <span>Возможность сопровождения <br>
+                              *по согласованию.</span>
+                          </div>
+                          <a href="#" class="item-tariffsHome__button _mmd2dn">Заказать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="item-tariffsHome__button">Заказать</a>
+                </div>
+              </div>
+              <div class="tariffs-home__item item-tariffsHome" style="--tariffColor: #43A400;">
+                <div class="item-tariffsHome__title">Стандарт</div>
+                <div class="item-tariffsHome__body">
+                  <div class="item-tariffsHome__icon">
+                    <img src="@img/home_tariffs_truck.svg" alt="image">
+                  </div>
+                  <div class="spollers-tariffsHome__mobtitle">Стандарт</div>
+                  <div class="item-tariffsHome__price _roboto">от 15 450 руб.</div>
+                  <div class="item-tariffsHome__advantages">
+                    <div data-tariffs class="spollers-tariffsHome">
+                      <div class="spollers-tariffsHome__item">
+                        <button data-tariff-button="Стандарт" type="button" class="spollers-tariffsHome__title">
+                          <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 1L8 8L1 1" stroke="url(#paint0_linear_525_6793)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_525_6793" x1="1" y1="8" x2="15" y2="8" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF7E01"/>
+                            <stop offset="1" stop-color="#FF3100"/>
+                            </linearGradient>
+                            </defs>
+                          </svg>
+                          <span>Показать приемущества</span>
+                        </button>
+                        <div data-tariff="Стандарт" data-da=".wrapper,992, last" class="spollers-tariffsHome__bg" style="--tariffColor: #43A400;"></div>
+                        <div data-tariff="Стандарт" data-da=".wrapper,992, last" class="spollers-tariffsHome__body" style="--tariffColor: #43A400;">
+                          <div class="spollers-tariffsHome__mobile">
+                            <div class="spollers-tariffsHome__close"></div>
+                            <div class="spollers-tariffsHome__mobtitle">Стандарт</div>
+                            <div class="spollers-tariffsHome__mobprice _roboto">от 15 450 руб.</div>
+                          </div>
+                          <div class="spollers-tariffsHome__little">В стоимость входит:</div>
+                          <ul class="spollers-tariffsHome__list">
+                            <li class="spollers-tariffsHome__li">Доставка «подъезд - подъезд»</li>
+                            <li class="spollers-tariffsHome__li">Помощь в оценке объема груза</li>
+                            <li class="spollers-tariffsHome__li">Персональный менеджер 24/7</li>
+                            <li class="spollers-tariffsHome__li">Отслеживание груза</li>
+                            <li class="spollers-tariffsHome__li">Материальная ответственность</li>
+                            <li class="spollers-tariffsHome__li">Возможность оплаты на выгрузке</li>
+                            <li class="spollers-tariffsHome__li">Опломбировка кузова с грузом</li>
+                            <li class="spollers-tariffsHome__li">Погрузка в любое время 24/7</li>
+                          </ul>
+                          <div class="spollers-tariffsHome__label">
+                            <img src="@img/home_tariffs_person.svg" alt="image">
+                            <span>Возможность сопровождения <br>
+                              *по согласованию.</span>
+                          </div>
+                          <a href="#" class="item-tariffsHome__button _mmd2dn">Заказать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="item-tariffsHome__button">Заказать</a>
+                </div>
+              </div>
+              <div class="tariffs-home__item item-tariffsHome" style="--tariffColor: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);">
+                <div class="item-tariffsHome__title">Расширенный</div>
+                <div class="item-tariffsHome__body">
+                  <div class="item-tariffsHome__icon">
+                    <img src="@img/home_tariffs_truck.svg" alt="image">
+                  </div>
+                  <div class="spollers-tariffsHome__mobtitle">Расширенный</div>
+                  <div class="item-tariffsHome__price _roboto">от 20 900 руб.</div>
+                  <div class="item-tariffsHome__advantages">
+                    <div data-tariffs class="spollers-tariffsHome">
+                      <div class="spollers-tariffsHome__item">
+                        <button data-tariff-button="Расширенный" type="button" class="spollers-tariffsHome__title">
+                          <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 1L8 8L1 1" stroke="url(#paint0_linear_525_6793)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_525_6793" x1="1" y1="8" x2="15" y2="8" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF7E01"/>
+                            <stop offset="1" stop-color="#FF3100"/>
+                            </linearGradient>
+                            </defs>
+                          </svg>
+                          <span>Показать приемущества</span>
+                        </button>
+                        <div data-tariff="Расширенный" data-da=".wrapper,992, last" class="spollers-tariffsHome__bg" style="--tariffColor: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);"></div>
+                        <div data-tariff="Расширенный" data-da=".wrapper,992, last" class="spollers-tariffsHome__body" style="--tariffColor: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);">
+                          <div class="spollers-tariffHome__bg"></div>
+                          <div class="spollers-tariffsHome__mobile">
+                            <div class="spollers-tariffsHome__close"></div>
+                            <div class="spollers-tariffsHome__mobtitle">Расширенный</div>
+                            <div class="spollers-tariffsHome__mobprice _roboto">от 20 900 руб.</div>
+                          </div>
+                          <div class="spollers-tariffsHome__little">В стоимость входит:</div>
+                          <ul class="spollers-tariffsHome__list">
+                            <li class="spollers-tariffsHome__li">Доставка «подъезд - подъезд»</li>
+                            <li class="spollers-tariffsHome__li">Помощь в оценке объема груза</li>
+                            <li class="spollers-tariffsHome__li">Персональный менеджер 24/7</li>
+                            <li class="spollers-tariffsHome__li">Отслеживание груза</li>
+                            <li class="spollers-tariffsHome__li">Материальная ответственность</li>
+                            <li class="spollers-tariffsHome__li">Возможность оплаты на выгрузке</li>
+                            <li class="spollers-tariffsHome__li">Опломбировка кузова с грузом</li>
+                            <li class="spollers-tariffsHome__li">Погрузка в любое время 24/7</li>
+                            <li class="spollers-tariffsHome__li">Предоставим грузчиков</li>
+                          </ul>
+                          <div class="spollers-tariffsHome__label">
+                            <img src="@img/home_tariffs_person.svg" alt="image">
+                            <span>Возможность сопровождения <br>
+                              *по согласованию.</span>
+                          </div>
+                          <div class="spollers-tariffsHome__label">
+                            <img src="@img//home_tariffs_docs.svg" alt="image">
+                            <span>Пакет закрывающих документов</span>
+                          </div>
+                          <a href="#" class="item-tariffsHome__button _mmd2dn">Заказать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="item-tariffsHome__button">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="tariffs-home__change change-tariffsHome">
+              <div class="change-tariffsHome__title">Подобрать тариф</div>
+              <a href="#" class="change-tariffsHome__item">1-комн. квартира</a>
+              <a href="#" class="change-tariffsHome__item">2-комн. квартира</a>
+              <a href="#" class="change-tariffsHome__item">3-комн. квартира</a>
+              <a href="#" class="change-tariffsHome__item">Частный дом</a>
+              <a href="#" class="change-tariffsHome__item">Частный дом</a>
+            </div>
+          </div>
+        </section>
+        <section class="important-calc">
+          <div class="important-calc__container">
+            <div class="important-calc__content">
+              <div class="important-calc__head">
+                <h5 class="important-calc__title">Важная Информация!</h5>
+              </div>
+              <div class="important-calc__body">
+                <p>Автоматический расчет на нашем сайте показывает ориентировочные ставки и не является публичной офертой! Точная стоимость рейса рассчитывается специалистом индивидуально. Просим отнестись с пониманием и не ругаться на наших менеджеров, если они назовут Вам цену, которая отличается от увиденной Вами на сайте.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="callback-from">
+          <div class="callback-from__container">
+            <div class="callback-from__content">
+              <div class="callback-from__head">
+                <div class="callback-from__logo">
+                  <img src="@img/logo.png" alt="image">
+                </div>
+                <h2 class="callback-from__title">Если вам или вашей семье предстоит переезд <br>
+                  в другой город, то просто оставьте заявку. 
+                  </h2>
+              </div>
+              <div class="callback-from__button">
+                <div class="bid-home__btnwrap">
+                  <a href="#"  class="bid-home__button">
+                    <img src="@img/home_howwork_truck.svg" alt="image" class="_md3dn">
+                    <span>Сделать заявку на переезд</span>
+                  </a>
+                </div>
+              </div>
+              <p class="callback-from__label">Мы сделаем перевозку ваших вещей <br>
+                быстрой и безопасной</p>
+            </div>
+          </div>
+        </section>
+        <section class="reviews-home">
+          <div class="reviews-home__container_large">
+            <div class="reviews-home__head">
+              <h2 class="reviews-home__title">Отзывы наших 
+                клиентов</h2>
+              <div class="reviews-home__like">
+                <img src="@img/home_reviews_like.svg" alt="image">
+                <span>+45</span>
+              </div>
+              <a href="#" class="reviews-home__link">Все отзывы</a>
+            </div>
+            <div class="reviews-home__body">
+              <div class="reviews-home__slider swiper">
+                <div class="reviews-home__wrapper swiper-wrapper">
+                  <div class="reviews-home__slide swiper-slide slide-reviewsHome">
+                    <div class="slide-reviewsHome__head">
+                      <div class="slide-reviewsHome__avatar">
+                        <img src="@img/home_reviews_1.png" alt="image">
+                      </div>
+                      <div class="slide-reviewsHome__info">
+                        <div class="slide-reviewsHome__name">Елена</div>
+                        <div class="slide-reviewsHome__date">05 Февраля 2022</div>
+                      </div>
+                    </div>
+                    <div class="slide-reviewsHome__text">Был переезд Москва-Волгоград. Спасибо большущее за вашу слаженную работу! Решалось крайне быстро. Огромное спасибо менеджеру Свириденко Юлии за отношение к клиенту и к работе на все 100! Успехов!</div>
+                  </div>
+                  <div class="reviews-home__slide swiper-slide slide-reviewsHome">
+                    <div class="slide-reviewsHome__head">
+                      <div class="slide-reviewsHome__avatar">
+                        <img src="@img/home_reviews_2.png" alt="image">
+                      </div>
+                      <div class="slide-reviewsHome__info">
+                        <div class="slide-reviewsHome__name">Илья</div>
+                        <div class="slide-reviewsHome__date">05 Февраля 2022</div>
+                      </div>
+                    </div>
+                    <div class="slide-reviewsHome__text">
+                      Хочу выразить огромную благодарность Бабиной Наталье ( 7 (960) 340 42 60; natalya@s-pereezdom.ru), которая не только быстро и качественно подобрала нам машину под переезд из Санкт-Петербурга в Краснодар 04.02.2022, но и оперативно смогла найти замену, когда вечером перед загрузкой выяснилось, что назначенный водитель попал в аварию 
+                      <a href="#">Подробнее ></a>
+                    </div>
+                  </div>
+                  <div class="reviews-home__slide swiper-slide slide-reviewsHome">
+                    <div class="slide-reviewsHome__head">
+                      <div class="slide-reviewsHome__avatar">
+                        <img src="@img/home_reviews_1.png" alt="image">
+                      </div>
+                      <div class="slide-reviewsHome__info">
+                        <div class="slide-reviewsHome__name">Елена</div>
+                        <div class="slide-reviewsHome__date">05 Февраля 2022</div>
+                      </div>
+                    </div>
+                    <div class="slide-reviewsHome__text">Был переезд Москва-Волгоград. Спасибо большущее за вашу слаженную работу! Решалось крайне быстро. Огромное спасибо менеджеру Свириденко Юлии за отношение к клиенту и к работе на все 100! Успехов!</div>
+                  </div>
+                  <div class="reviews-home__slide swiper-slide slide-reviewsHome">
+                    <div class="slide-reviewsHome__head">
+                      <div class="slide-reviewsHome__avatar">
+                        <img src="@img/home_reviews_2.png" alt="image">
+                      </div>
+                      <div class="slide-reviewsHome__info">
+                        <div class="slide-reviewsHome__name">Илья</div>
+                        <div class="slide-reviewsHome__date">05 Февраля 2022</div>
+                      </div>
+                    </div>
+                    <div class="slide-reviewsHome__text">
+                      Хочу выразить огромную благодарность Бабиной Наталье ( 7 (960) 340 42 60; natalya@s-pereezdom.ru), которая не только быстро и качественно подобрала нам машину под переезд из Санкт-Петербурга в Краснодар 04.02.2022, но и оперативно смогла найти замену, когда вечером перед загрузкой выяснилось, что назначенный водитель попал в аварию 
+                      <a href="#">Подробнее ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-home__pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="info-services">
+          <div class="info-services__container">
+            <div class="info-services__phones">
+              <div class="info-services__icon">
+                <img src="@img/header_time.svg" alt="image">
+              </div>
+              <div class="info-services__item">
+                <a href="#" class="info-services__link info-services__link_bold _roboto">8 (800) 301-47-97</a>
+                <span class="info-services__time">c 8:00 до 21:00, ежедневно</span>
+              </div>
+              <div class="info-services__item">
+                <a href="#" class="info-services__link _roboto _roboto_regular">8 (969) 777-83-97</a>
+              </div>
+            </div>
+            <div class="info-services__bid">
+              <a href="#" class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+                <div class="item-whiteHeader__icon">
+                  <img src="@img/header_calc.svg" alt="image">
+                </div>
+                <div class="item-whiteHeader__body">Оставить заявку</div>
+              </a>
+            </div>
+          </div>
+        </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	</body>
+</html>

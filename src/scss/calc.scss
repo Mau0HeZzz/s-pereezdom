@@ -1,0 +1,38 @@
+.important-calc {
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 70, 40, 1920, 767, 1);
+  }
+
+  &__container {
+  }
+
+  &__content {
+    position: relative;
+    padding-left: rem(34);
+    &::before{
+      content:'';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(7);
+      height: 100%;
+      border-radius: rem(10);
+      background: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);
+    }
+  }
+
+  &__head {
+    &:not(:last-child) {margin-bottom: rem(10);}
+  }
+
+  &__title {
+    color: #FF5B01;
+    font-weight: 700;
+    font-size: rem(14);
+  }
+
+  &__body {
+    line-height: math.div(24 , 16);
+  }
+}
