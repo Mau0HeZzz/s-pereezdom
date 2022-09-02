@@ -107,8 +107,8 @@ body {
 			margin: 0 auto;
 		}
 		@if ($containerPadding>0) {
-      @include adaptiveValue("padding-left", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
-      @include adaptiveValue("padding-right", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
+      	      @include adaptiveValue("padding-left", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
+      	      @include adaptiveValue("padding-right", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
 		}
 	}
 	[class*="__container_large"] {

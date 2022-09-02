@@ -1749,6 +1749,7 @@
   // .sliders-reviews__container
   
   &__container {
+    padding: 0;
   }
 
   // .sliders-reviews__head
@@ -1761,6 +1762,9 @@
     gap: rem(20);
     background-color: #fff;
     @include adaptiveValue("line-height", 65, 32, 1920, 360, 1);
+    @media (max-width:$pc){
+        padding: 0 rem(15);
+    }
   }
 
   &__title {
@@ -1789,20 +1793,17 @@
   &__body {
     display: flex;
     flex-direction: column;
-    gap: rem(45);
     @include adaptiveValue("padding-bottom", 114, 45, 1920, 360, 1);
-    @media (max-width:$mobile){
-       gap: rem(20); 
-    }
   }
 
   // .sliders-reviews__slider
 
   &__slider {
+    padding-bottom: rem(29);
+    padding-top: rem(15);
     overflow: visible !important;
-    @media (max-width:$mobile){
-      //  overflow: hidden !important; 
-    }
+    @include adaptiveValue("padding-left", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
+    @include adaptiveValue("padding-right", math.div($containerPadding, 2), math.div($containerPadding, 8), 1920, 767, 1);
   }
 
   // .sliders-reviews__wrapper

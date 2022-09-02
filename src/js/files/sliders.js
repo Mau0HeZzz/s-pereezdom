@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -390,12 +390,12 @@ function initSliders() {
 
 	const reviewsSliders =document.querySelectorAll('[data-review-slider]');
 	if (reviewsSliders.length) {
-		reviewsSliders.forEach(reviewsSlider=>{
+		reviewsSliders.forEach((reviewsSlider, index)=>{
 			let centeredSlides = reviewsSlider.dataset.centeredSlides === '1' ? true : false;
 			new Swiper(reviewsSlider, { // Указываем скласс нужного слайдера
 				// Подключаем модули слайдера
 				// для конкретного случая
-				modules: [Pagination],
+				modules: [Pagination, Autoplay],
 				observer: true,
 				observeParents: true,
 				slidesPerView: 2.3,
