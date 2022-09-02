@@ -404,7 +404,7 @@ function initSliders() {
 				centeredSlides: centeredSlides,
 				//touchRatio: 0,
 				//simulateTouch: false,
-				loop: false,
+				loop: true,
 				//preloadImages: false,
 				//lazy: true,
 				/*
@@ -434,19 +434,19 @@ function initSliders() {
 				breakpoints: {
 					320: {
 						slidesPerView: 1,
-						spaceBetween: 10,
+						spaceBetween: 20,
 					},
 					768: {
-						slidesPerView: 2,
+						slidesPerView: 1.3,
 						spaceBetween: 30,
 					},
 					992: {
-						slidesPerView: 3,
-						spaceBetween: 60,
+						slidesPerView: 1.8,
+						spaceBetween: 43,
 					},
 					1290: {
-						slidesPerView: 4,
-						spaceBetween: 76,
+						slidesPerView: 2.08,
+						spaceBetween: 43,
 					},
 				},
 				// События
