@@ -306,3 +306,137 @@
     }
   }
 }
+
+
+//========================================================================================================================================================
+
+
+.callbackPopup {
+
+  &__warpper {
+  }
+
+  &__content {
+    background: linear-gradient(180deg, #678E05 -6.41%, #373A2F 100%);
+  }
+
+  &__text {
+  }
+
+  &__form {
+  }
+
+  &__close {
+    margin-left: auto;
+    display: block;
+    svg * {
+      fill: #fff;
+      stroke: #fff;
+    }
+    &:not(:last-child) {margin-bottom: rem(15);}
+  }
+}
+.form-callbackPopup {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: rem(30);
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    p {
+      font-weight: 500;
+      font-size: rem(18);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 25, 1920, 767, 1);
+  }
+
+  &__body {
+  }
+
+  &__row {
+    position: relative;
+    &:not(:last-child) {margin-bottom: rem(15);}
+  }
+
+  &__input {
+    @extend .callback-home__input;
+  }
+
+  &__label {
+  }
+
+  &__textarea {
+    @extend .callback-home__input;
+  }
+
+  &__agree {
+    text-align: left;
+    position: relative;
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    &:checked+label::after {
+      display: block;
+    }
+  }
+
+  &__ageelabel {
+    font-weight: 500;
+    font-size: rem(17);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: rem(10);
+    &::before{
+      content:'';
+      width: rem(17);
+      height: rem(17);
+      flex: 0 0 rem(17);
+      border-radius: rem(4);
+      border: rem(1) solid #fff;
+    }
+    &::after{
+      content:'';
+      position: absolute;
+      width: rem(10);
+      height: rem(7);
+      border-bottom: rem(2) solid #fff;
+      border-left: rem(2) solid #fff;
+      transform: rotate(-45deg);
+      top: rem(3.5);
+      left: rem(3.5);
+      display: none;
+    }
+    a {
+      text-decoration: underline !important;
+      @media (any-hover: hover){
+        &:hover{
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    @extend ._redgrad;
+    align-self: flex-start;
+    min-width: rem(190);
+    border-radius: rem(15);
+    padding: rem(15);
+    font-weight: 600;
+    font-size: rem(18);
+  }
+}

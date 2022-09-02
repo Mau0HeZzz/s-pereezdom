@@ -15,7 +15,7 @@
             </ul>
           </div>
         </div>
-        <div class="main-calc">
+        <section class="main-calc">
           <div class="main-calc__container">
             <div class="main-calc__head">
               <h1 class="main-calc__title">Калькулятор</h1>
@@ -44,7 +44,8 @@
                         </div>
                         <div class="calc-mainCalc__grey">Везем - </div>
                         <div class="calc-mainCalc__select">
-                          <select data-scroll="250">
+                          <!-- data-submit включает отправку формы после изменения селекта -->
+                          <select data-scroll="250" data-submit>
                             <option value="1" selected>Квартира</option>
                             <option value="2">Дом</option>
                             <option value="3">Сад</option>
@@ -61,7 +62,7 @@
                         </div>
                         <div class="calc-mainCalc__grey">Город - </div>
                         <div class="calc-mainCalc__select">
-                          <select data-search data-scroll="250">
+                          <select data-search data-scroll="250" data-submit>
                             <option value="" selected>Выбрать город</option>
                             <option value="2">Москва</option>
                             <option value="3">Питер</option>
@@ -91,29 +92,105 @@
                       <div class="item-whiteHeader__icon">
                         <img src="@img/header_calc.svg" alt="image">
                       </div>
-                      <div class="item-whiteHeader__body">Расчитать <span>стоимость</span></div>
+                      <div class="item-whiteHeader__body">Расчитать</div>
                     </button>
                   </div>
                 </div>
                 <div class="calc-mainCalc__item">
                   <div class="calc-mainCalc__statuses">
                     <div class="calc-mainCalc__status">
-                      <div class="calc-mainCalc__image"></div>
-                      <div class="calc-mainCalc__label"></div>
-                      <div class="calc-mainCalc__number"></div>
+                      <div class="calc-mainCalc__image">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.8694 44.9995H2.41925C1.63866 44.9995 1 44.3606 1 43.5797V31.5116C1 30.7307 1.63866 30.0918 2.41925 30.0918H20.8694C21.65 30.0918 22.2887 30.7307 22.2887 31.5116V43.5797C22.2887 44.3606 21.65 44.9995 20.8694 44.9995Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1.30273 30.6423L4.15898 24.5195C4.38961 24.0226 4.88634 23.7031 5.4363 23.7031H17.8192C18.3692 23.7031 18.8659 24.0226 19.0965 24.5195L22.0415 30.7665" fill="white"/>
+                          <path d="M1.30273 30.6423L4.15898 24.5195C4.38961 24.0226 4.88634 23.7031 5.4363 23.7031H17.8192C18.3692 23.7031 18.8659 24.0226 19.0965 24.5195L22.0415 30.7665" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.2259 23.7031L8.80664 30.0921V34.3515H14.4836V30.0921L13.0644 23.7031" fill="white"/>
+                          <path d="M10.2259 23.7031L8.80664 30.0921V34.3515H14.4836V30.0921L13.0644 23.7031" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M38.6457 8.26303C39.7456 6.41732 39.4973 4.00372 37.8651 2.42421C35.9314 0.525262 32.7736 0.525262 30.8398 2.42421C29.2077 4.00372 28.9593 6.41732 30.0593 8.26303L34.3525 14.4923L38.6457 8.26303Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M35.3644 4.96243C35.9144 5.51259 35.9144 6.41771 35.3644 6.96787C34.8145 7.51803 33.9097 7.51803 33.3597 6.96787C32.8098 6.41771 32.8098 5.51259 33.3597 4.96243C33.892 4.41226 34.7967 4.41226 35.3644 4.96243Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M30.8044 14.4746H18.386C17.02 14.4746 15.9023 15.5927 15.9023 16.9592C15.9023 18.3258 17.02 19.4438 18.386 19.4438H32.2237C39.2844 19.4438 44.9969 25.1584 44.9969 32.2218C44.9969 39.2852 39.2844 44.9998 32.2237 44.9998H25.1274" fill="white"/>
+                          <path d="M30.8044 14.4746H18.386C17.02 14.4746 15.9023 15.5927 15.9023 16.9592C15.9023 18.3258 17.02 19.4438 18.386 19.4438H32.2237C39.2844 19.4438 44.9969 25.1584 44.9969 32.2218C44.9969 39.2852 39.2844 44.9998 32.2237 44.9998H25.1274" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="calc-mainCalc__label">Растояние</div>
+                      <div class="calc-mainCalc__number">0</div>
                     </div>
                     <div class="calc-mainCalc__status">
-                      <div class="calc-mainCalc__image"></div>
-                      <div class="calc-mainCalc__label"></div>
-                      <div class="calc-mainCalc__number"></div>
+                      <div class="calc-mainCalc__image">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" fill="white"/>
+                          <path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19.444 12.3546H15.1875V5.25781" fill="white"/>
+                          <path d="M19.444 12.3546H15.1875V5.25781" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" fill="white"/>
+                          <path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M35.0511 42.8711H15.1875" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" fill="white"/>
+                          <path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029V29.3867Z" fill="white"/>
+                          <path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" fill="white"/>
+                          <path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M31.5041 30.0968H27.957V23" fill="white"/>
+                          <path d="M31.5041 30.0968H27.957V23" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" fill="white"/>
+                          <path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 37.1934H8.09547V40.0321" fill="white"/>
+                          <path d="M5.25781 37.1934H8.09547V40.0321" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 26.5479H2.41883" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 26.5479H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12.3509 23.709H3.83789" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.8422 34.3545H42.1465V37.1932H44.9841" fill="white"/>
+                          <path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 40.0322H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="calc-mainCalc__label">Срок доставки</div>
+                      <div class="calc-mainCalc__number">0</div>
                     </div>
                     <div class="calc-mainCalc__status">
-                      <div class="calc-mainCalc__image"></div>
-                      <div class="calc-mainCalc__label"></div>
-                      <div class="calc-mainCalc__number"></div>
+                      <div class="calc-mainCalc__image">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" fill="white"/>
+                          <path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19.444 12.3546H15.1875V5.25781" fill="white"/>
+                          <path d="M19.444 12.3546H15.1875V5.25781" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" fill="white"/>
+                          <path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M35.0511 42.8711H15.1875" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" fill="white"/>
+                          <path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029V29.3867Z" fill="white"/>
+                          <path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" fill="white"/>
+                          <path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M31.5041 30.0968H27.957V23" fill="white"/>
+                          <path d="M31.5041 30.0968H27.957V23" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" fill="white"/>
+                          <path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 37.1934H8.09547V40.0321" fill="white"/>
+                          <path d="M5.25781 37.1934H8.09547V40.0321" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 26.5479H2.41883" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 26.5479H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12.3509 23.709H3.83789" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.8422 34.3545H42.1465V37.1932H44.9841" fill="white"/>
+                          <path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 40.0322H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="calc-mainCalc__label">Стоимость, руб.</div>
+                      <div class="calc-mainCalc__number">0</div>
                     </div>
                   </div>
-                  <div class="calc-mainCalc__button"></div>
+                  <div class="calc-mainCalc__button">
+                    <a href="#" disabled class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+                      <div class="item-whiteHeader__body">Оставить заявку</div>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="main-calc__important">
@@ -132,7 +209,148 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="main-calc main-calc_active">
+          <div class="main-calc__container">
+            <div class="main-calc__body">
+              <div class="main-calc__calc calc-mainCalc">
+                <div class="calc-mainCalc__item">
+                  <div class="calc-mainCalc__form">
+                    <div class="calc-mainCalc__content">
+                      <div class="calc-mainCalc__row">
+                        <div class="calc-mainCalc__icon">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <span class="calc-mainCalc__grey">Вы в </span>
+                        <span class="calc-mainCalc__black">Екатеренбурге</span>
+                        <a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+                      </div>
+                      <div class="calc-mainCalc__row">
+                        <div class="calc-mainCalc__icon">
+                          <svg width="2" height="60" viewBox="0 0 2 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1" y1="4.37114e-08" x2="0.999997" y2="60" stroke="#43A400" stroke-width="2"/>
+                          </svg>
+                        </div>
+                        <div class="calc-mainCalc__grey">Везем - </div>
+                        <span class="calc-mainCalc__black">Квартира</span>
+                        <a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+                      </div>
+                      <div class="calc-mainCalc__row">
+                        <div class="calc-mainCalc__icon">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div class="calc-mainCalc__grey">Город - </div>
+                        <span class="calc-mainCalc__black">Санкт-Петербург</span>
+                        <a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc-mainCalc__button">
+                    <button disabled type="submit" class="white-header__item item-whiteHeader item-whiteHeader_calc">
+                      <div class="item-whiteHeader__icon">
+                        <img src="@img/header_calc.svg" alt="image">
+                      </div>
+                      <div class="item-whiteHeader__body">Расчитать</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="calc-mainCalc__item">
+                  <div class="calc-mainCalc__statuses">
+                    <div class="calc-mainCalc__status">
+                      <div class="calc-mainCalc__image">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.8694 44.9995H2.41925C1.63866 44.9995 1 44.3606 1 43.5797V31.5116C1 30.7307 1.63866 30.0918 2.41925 30.0918H20.8694C21.65 30.0918 22.2887 30.7307 22.2887 31.5116V43.5797C22.2887 44.3606 21.65 44.9995 20.8694 44.9995Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1.30273 30.6423L4.15898 24.5195C4.38961 24.0226 4.88634 23.7031 5.4363 23.7031H17.8192C18.3692 23.7031 18.8659 24.0226 19.0965 24.5195L22.0415 30.7665" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.2259 23.7031L8.80664 30.0921V34.3515H14.4836V30.0921L13.0644 23.7031" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M38.6457 8.26303C39.7456 6.41732 39.4973 4.00372 37.8651 2.42421C35.9314 0.525262 32.7736 0.525262 30.8398 2.42421C29.2077 4.00372 28.9593 6.41732 30.0593 8.26303L34.3525 14.4923L38.6457 8.26303Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M35.3644 4.96243C35.9144 5.51259 35.9144 6.41771 35.3644 6.96787C34.8145 7.51803 33.9097 7.51803 33.3597 6.96787C32.8098 6.41771 32.8098 5.51259 33.3597 4.96243C33.892 4.41226 34.7967 4.41226 35.3644 4.96243Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M30.8044 14.4746H18.386C17.02 14.4746 15.9023 15.5927 15.9023 16.9592C15.9023 18.3258 17.02 19.4438 18.386 19.4438H32.2237C39.2844 19.4438 44.9969 25.1584 44.9969 32.2218C44.9969 39.2852 39.2844 44.9998 32.2237 44.9998H25.1274" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="calc-mainCalc__label">Растояние</div>
+                      <div class="calc-mainCalc__number">300 км</div>
+                    </div>
+                    <div class="calc-mainCalc__status">
+                      <div class="calc-mainCalc__image">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19.444 12.3546H15.1875V5.25781" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M35.0511 42.8711H15.1875" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M31.5041 30.0968H27.957V23" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 37.1934H8.09547V40.0321" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 26.5479H2.41883" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 26.5479H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12.3509 23.709H3.83789" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 40.0322H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="calc-mainCalc__label">Срок доставки</div>
+                      <div class="calc-mainCalc__number">3 дня</div>
+                    </div>
+                    <div class="calc-mainCalc__status">
+                      <div class="calc-mainCalc__image">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19.444 12.3546H15.1875V5.25781" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M35.0511 42.8711H15.1875" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M31.5041 30.0968H27.957V23" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 37.1934H8.09547V40.0321" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 26.5479H2.41883" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 26.5479H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12.3509 23.709H3.83789" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.25781 40.0322H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="calc-mainCalc__label">Стоимость, руб.</div>
+                      <div class="calc-mainCalc__number">300 000</div>
+                    </div>
+                  </div>
+                  <div class="calc-mainCalc__button">
+                    <a href="#" class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+                      <div class="item-whiteHeader__body">Оставить заявку</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="main-calc__important">
+                <div class="important-calc">
+                  <div class="important-calc__container">
+                    <div class="important-calc__content">
+                      <div class="important-calc__head">
+                        <h5 class="important-calc__title">Важная Информация!</h5>
+                      </div>
+                      <div class="important-calc__body">
+                        <p>Насколько я понял это два состояния одной и той же формы до и после её отправки. Поэтому здесь на одной странице собраны оба.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="tariffs-home tariffs-home_solo">
           <div class="tariffs-home__container">
             <div class="tariffs-home__head">

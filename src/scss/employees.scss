@@ -1,0 +1,9 @@
+.employees-tabs {
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, rem(300));
+    @include adaptiveValue("gap", 30, 23, 1920, 767, 1);
+    justify-content: center;
+  }
+}
