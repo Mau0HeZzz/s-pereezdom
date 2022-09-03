@@ -6079,8 +6079,17 @@ svg {
   left: 0;
   background-color: #fff;
   border-top: 0;
-  border-top: 0;
   padding: 10px 0px 5px 0px;
+}
+
+.calc-mainCalc__select .select__options .simplebar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .calc-mainCalc__select .select__scroll {

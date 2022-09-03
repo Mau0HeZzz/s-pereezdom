@@ -250,8 +250,11 @@
         left: 0;
         background-color: #fff;
         border-top: 0;
-        border-top: 0;
         padding: 10px 0px 5px 0px;
+        .simplebar-content {
+          display: flex;
+          flex-direction: column;
+        }
       }
       // .select__scroll
       &__scroll {
