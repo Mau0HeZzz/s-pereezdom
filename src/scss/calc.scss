@@ -74,7 +74,7 @@
   }
 }
 .calc-mainCalc {
-  padding: rem(32) rem(35);
+  @include adaptiveValue("padding", 33, 15, 1920, 767, 1);
   flex: 1 0 65%;
   border: 1px solid #F1F1F1;
   @media (min-width:$mobile){
@@ -117,7 +117,11 @@
       border-radius: rem(15);
       &:not(:last-child) {margin-bottom: rem(11);}
       min-height: rem(60);
-      padding: rem(14)
+      padding: rem(14);
+      white-space: nowrap;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(15);
     }
   }
 
@@ -159,6 +163,10 @@
       border-radius: rem(10);
       background-color: #43A400;
       margin-left: auto;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(10);
+      padding: rem(5) rem(7.5);
     }
   }
 
@@ -213,6 +221,9 @@
             content: attr(data-pseudo-label);
             opacity: 0.5;
           }
+        }
+        @media (max-width:$mobile){
+          padding-left: 0;
         }
       }
       // .select__text
@@ -339,6 +350,8 @@
     @media (max-width:$mobile){
       max-width: 100%;
       overflow-x: auto;
+      flex: 1 1 auto;
+      justify-content: space-between;
     }
   }
 

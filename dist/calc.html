@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Калькулятор</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220903104736">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="60" class="header">
+			<div class="header__black black-header">
+				<div class="black-header__container">
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<a href="/" class="black-header__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo"></picture>
+						</a>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<div data-spollers="767" class="header-spollers">
+										<div class="header-spollers__item">
+											<a href="#" data-spoller class="header-spollers__title">Услуги</a>
+											<div class="header-spollers__body" hidden>
+												<ul>
+													<li><a href="#">Домашний переезд</a></li>
+													<li><a href="#">Квартирный переезд с грузчиками по РФ</a></li>
+													<li><a href="#">Переезды для военнослужащих</a></li>
+													<li><a href="#">Офисные переезды</a></li>
+													<li><a href="#">Корпоративный переезд сотрудников</a></li>
+													<li><a href="#">Переезд в Москву</a></li>
+													<li><a href="#">Переезд в Санкт-Петербург</a></li>
+													<li><a href="#">Переезд в Краснодар</a></li>
+													<li><a href="#">Переезд в Беларусь</a></li>
+													<li><a href="#">Переезд в Калининград</a></li>
+													<li><a class="header-spollers__all" href="#">
+															<span>Все услуги</span>
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M14 5L21 12M21 12L14 19M21 12H3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">О Компании</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+							<div class="black-header__mobile mobile-blackHeader">
+								<div class="mobile-blackHeader__contacts">
+									<a href="tel:88003014797" class="mobile-blackHeader__phone mobile-blackHeader__phone_fw _roboto">8 (800) 301-47-97</a>
+									<a href="tel:89697778397" class="mobile-blackHeader__phone _roboto">8 (969) 777-83-97</a>
+									<a href="mailto:info@s-pereezdom.ru" class="mobile-blackHeader__mail">info@s-pereezdom.ru</a>
+								</div>
+								<div class="mobile-blackHeader__socials">
+									<a href="#" class="mobile-blackHeader__social">
+										<img src="img/footer_vk.svg" alt="image">
+									</a>
+									<a href="#" class="mobile-blackHeader__social">
+										<img src="img/footer_ok.svg" alt="image">
+									</a>
+									<a href="#" class="mobile-blackHeader__social">
+										<img src="img/footer_inst.svg" alt="image">
+									</a>
+								</div>
+							</div>
+						</nav>
+						<a href="#" data-da=".white-header__container, 767, 0" class="black-header__callback">
+							<i>
+								<img src="img/home_advantages_phone.svg" alt="image">
+							</i>
+							<span>Заказать </span>звонок
+						</a>
+						<a href="#" class="black-header__location">
+							<img src="img/header_location.svg" alt="image">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__white white-header">
+				<div class="white-header__container">
+					<div class="white-header__item item-whiteHeader ">
+						<div class="item-whiteHeader__icon">
+							<img src="img/header_city.svg" alt="image">
+						</div>
+						<div data-da=".menu__body, 767, 0" class="item-whiteHeader__body">
+							<h2 class="item-whiteHeader__title">Переезды по&nbsp;России&nbsp;и&nbsp;СНГ</h2>
+							<p class="item-whiteHeader__label">Выбрать регион: <a href="#" data-popup="#regionPopup" class="item-whiteHeader__city">Екатерибург</a></p>
+						</div>
+					</div>
+					<div class="white-header__item item-whiteHeader ">
+						<div class="item-whiteHeader__icon">
+							<img src="img/header_time.svg" alt="image">
+						</div>
+						<div class="item-whiteHeader__body">
+							<a href="tel:88003014797" class="item-whiteHeader__title _roboto">8 (800) 301-47-97</a>
+							<p class="item-whiteHeader__label">С <span class="_roboto _roboto_regular">8:00</span> до <span class="_roboto _roboto_regular">21:00</span>, Ежедневно: <a href="tel:+79697778397" class="item-whiteHeader__link _roboto _roboto_regular">+7 (969) 777-83-97</a></p>
+						</div>
+					</div>
+					<a href="#" class="white-header__item item-whiteHeader item-whiteHeader_calc">
+						<div class="item-whiteHeader__icon">
+							<img src="img/header_calc.svg" alt="image">
+						</div>
+						<div class="item-whiteHeader__body">Расчитать <span>стоимость</span></div>
+					</a>
+				</div>
+			</div>
+		</header>
+		<main class="page page__calc">
+			<div class="breadcumps">
+				<div class="breadcumps__container">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li>Калькулятор</li>
+					</ul>
+				</div>
+			</div>
+			<section class="main-calc">
+				<div class="main-calc__container">
+					<div class="main-calc__head">
+						<h1 class="main-calc__title">Калькулятор</h1>
+					</div>
+					<div class="main-calc__body">
+						<div class="main-calc__calc calc-mainCalc">
+							<div class="calc-mainCalc__item">
+								<form action="#" data-ajax method="post" class="calc-mainCalc__form">
+									<div class="calc-mainCalc__content">
+										<div class="calc-mainCalc__row">
+											<div class="calc-mainCalc__icon">
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+											<span class="calc-mainCalc__grey">Вы в </span>
+											<span class="calc-mainCalc__black">Екатеренбурге</span>
+											<a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+										</div>
+										<div class="calc-mainCalc__row">
+											<div class="calc-mainCalc__icon">
+												<svg width="2" height="60" viewBox="0 0 2 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<line x1="1" y1="4.37114e-08" x2="0.999997" y2="60" stroke="#999999" stroke-width="2" />
+												</svg>
+											</div>
+											<div class="calc-mainCalc__grey">Везем - </div>
+											<div class="calc-mainCalc__select">
+												<!-- data-submit включает отправку формы после изменения селекта -->
+												<select data-scroll="250" data-submit>
+													<option value="1" selected>Квартира</option>
+													<option value="2">Дом</option>
+													<option value="3">Сад</option>
+													<option value="4">Огород</option>
+												</select>
+											</div>
+										</div>
+										<div class="calc-mainCalc__row">
+											<div class="calc-mainCalc__icon">
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+											<div class="calc-mainCalc__grey">Город - </div>
+											<div class="calc-mainCalc__select">
+												<select data-search data-scroll="250" data-submit>
+													<option value="" selected>Выбрать город</option>
+													<option value="2">Москва</option>
+													<option value="3">Питер</option>
+													<option value="4">Казахстан</option>
+													<option value="2">Москва</option>
+													<option value="3">Питер</option>
+													<option value="4">Казахстан</option>
+													<option value="2">Москва</option>
+													<option value="3">Питер</option>
+													<option value="4">Казахстан</option>
+													<option value="2">Москва</option>
+													<option value="3">Питер</option>
+													<option value="4">Казахстан</option>
+													<option value="2">Москва</option>
+													<option value="3">Питер</option>
+													<option value="4">Казахстан</option>
+													<option value="2">Москва</option>
+													<option value="3">Питер</option>
+													<option value="4">Казахстан</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="calc-mainCalc__button">
+									<button type="submit" class="white-header__item item-whiteHeader item-whiteHeader_calc">
+										<div class="item-whiteHeader__icon">
+											<img src="img/header_calc.svg" alt="image">
+										</div>
+										<div class="item-whiteHeader__body">Расчитать</div>
+									</button>
+								</div>
+							</div>
+							<div class="calc-mainCalc__item">
+								<div class="calc-mainCalc__statuses">
+									<div class="calc-mainCalc__status">
+										<div class="calc-mainCalc__image">
+											<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M20.8694 44.9995H2.41925C1.63866 44.9995 1 44.3606 1 43.5797V31.5116C1 30.7307 1.63866 30.0918 2.41925 30.0918H20.8694C21.65 30.0918 22.2887 30.7307 22.2887 31.5116V43.5797C22.2887 44.3606 21.65 44.9995 20.8694 44.9995Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1.30273 30.6423L4.15898 24.5195C4.38961 24.0226 4.88634 23.7031 5.4363 23.7031H17.8192C18.3692 23.7031 18.8659 24.0226 19.0965 24.5195L22.0415 30.7665" fill="white" />
+												<path d="M1.30273 30.6423L4.15898 24.5195C4.38961 24.0226 4.88634 23.7031 5.4363 23.7031H17.8192C18.3692 23.7031 18.8659 24.0226 19.0965 24.5195L22.0415 30.7665" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.2259 23.7031L8.80664 30.0921V34.3515H14.4836V30.0921L13.0644 23.7031" fill="white" />
+												<path d="M10.2259 23.7031L8.80664 30.0921V34.3515H14.4836V30.0921L13.0644 23.7031" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M38.6457 8.26303C39.7456 6.41732 39.4973 4.00372 37.8651 2.42421C35.9314 0.525262 32.7736 0.525262 30.8398 2.42421C29.2077 4.00372 28.9593 6.41732 30.0593 8.26303L34.3525 14.4923L38.6457 8.26303Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M35.3644 4.96243C35.9144 5.51259 35.9144 6.41771 35.3644 6.96787C34.8145 7.51803 33.9097 7.51803 33.3597 6.96787C32.8098 6.41771 32.8098 5.51259 33.3597 4.96243C33.892 4.41226 34.7967 4.41226 35.3644 4.96243Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M30.8044 14.4746H18.386C17.02 14.4746 15.9023 15.5927 15.9023 16.9592C15.9023 18.3258 17.02 19.4438 18.386 19.4438H32.2237C39.2844 19.4438 44.9969 25.1584 44.9969 32.2218C44.9969 39.2852 39.2844 44.9998 32.2237 44.9998H25.1274" fill="white" />
+												<path d="M30.8044 14.4746H18.386C17.02 14.4746 15.9023 15.5927 15.9023 16.9592C15.9023 18.3258 17.02 19.4438 18.386 19.4438H32.2237C39.2844 19.4438 44.9969 25.1584 44.9969 32.2218C44.9969 39.2852 39.2844 44.9998 32.2237 44.9998H25.1274" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="calc-mainCalc__label">Растояние</div>
+										<div class="calc-mainCalc__number">0</div>
+									</div>
+									<div class="calc-mainCalc__status">
+										<div class="calc-mainCalc__image">
+											<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" fill="white" />
+												<path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M19.444 12.3546H15.1875V5.25781" fill="white" />
+												<path d="M19.444 12.3546H15.1875V5.25781" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" fill="white" />
+												<path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M35.0511 42.8711H15.1875" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" fill="white" />
+												<path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029V29.3867Z" fill="white" />
+												<path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" fill="white" />
+												<path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M31.5041 30.0968H27.957V23" fill="white" />
+												<path d="M31.5041 30.0968H27.957V23" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" fill="white" />
+												<path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 37.1934H8.09547V40.0321" fill="white" />
+												<path d="M5.25781 37.1934H8.09547V40.0321" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1 26.5479H2.41883" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 26.5479H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M12.3509 23.709H3.83789" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.8422 34.3545H42.1465V37.1932H44.9841" fill="white" />
+												<path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 40.0322H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="calc-mainCalc__label">Срок доставки</div>
+										<div class="calc-mainCalc__number">0</div>
+									</div>
+									<div class="calc-mainCalc__status">
+										<div class="calc-mainCalc__image">
+											<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" fill="white" />
+												<path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M19.444 12.3546H15.1875V5.25781" fill="white" />
+												<path d="M19.444 12.3546H15.1875V5.25781" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" fill="white" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" fill="white" />
+												<path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M35.0511 42.8711H15.1875" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" fill="white" />
+												<path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029V29.3867Z" fill="white" />
+												<path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" fill="white" />
+												<path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M31.5041 30.0968H27.957V23" fill="white" />
+												<path d="M31.5041 30.0968H27.957V23" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" fill="white" />
+												<path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 37.1934H8.09547V40.0321" fill="white" />
+												<path d="M5.25781 37.1934H8.09547V40.0321" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1 26.5479H2.41883" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 26.5479H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M12.3509 23.709H3.83789" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.8422 34.3545H42.1465V37.1932H44.9841" fill="white" />
+												<path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 40.0322H8.09547" stroke="#999999" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="calc-mainCalc__label">Стоимость, руб.</div>
+										<div class="calc-mainCalc__number">0</div>
+									</div>
+								</div>
+								<div class="calc-mainCalc__button">
+									<a href="#" disabled class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+										<div class="item-whiteHeader__body">Оставить заявку</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="main-calc__important">
+							<div class="important-calc">
+								<div class="important-calc__container">
+									<div class="important-calc__content">
+										<div class="important-calc__head">
+											<h5 class="important-calc__title">Важная Информация!</h5>
+										</div>
+										<div class="important-calc__body">
+											<p>Автоматический расчет на нашем сайте показывает ориентировочные ставки и не является публичной офертой! Точная стоимость рейса рассчитывается специалистом индивидуально. Просим отнестись с пониманием и не ругаться на наших менеджеров, если они назовут Вам цену, которая отличается от увиденной Вами на сайте.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-calc main-calc_active">
+				<div class="main-calc__container">
+					<div class="main-calc__body">
+						<div class="main-calc__calc calc-mainCalc">
+							<div class="calc-mainCalc__item">
+								<div class="calc-mainCalc__form">
+									<div class="calc-mainCalc__content">
+										<div class="calc-mainCalc__row">
+											<div class="calc-mainCalc__icon">
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+											<span class="calc-mainCalc__grey">Вы в </span>
+											<span class="calc-mainCalc__black">Екатеренбурге</span>
+											<a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+										</div>
+										<div class="calc-mainCalc__row">
+											<div class="calc-mainCalc__icon">
+												<svg width="2" height="60" viewBox="0 0 2 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<line x1="1" y1="4.37114e-08" x2="0.999997" y2="60" stroke="#43A400" stroke-width="2" />
+												</svg>
+											</div>
+											<div class="calc-mainCalc__grey">Везем - </div>
+											<span class="calc-mainCalc__black">Квартира</span>
+											<a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+										</div>
+										<div class="calc-mainCalc__row">
+											<div class="calc-mainCalc__icon">
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M22.0713 20.8209L16.7675 26.1246C16.5356 26.3568 16.2601 26.541 15.957 26.6667C15.6538 26.7923 15.3288 26.857 15.0006 26.857C14.6724 26.857 14.3475 26.7923 14.0443 26.6667C13.7411 26.541 13.4657 26.3568 13.2338 26.1246L7.92875 20.8209C6.53028 19.4223 5.57792 17.6405 5.19211 15.7007C4.8063 13.7609 5.00437 11.7503 5.76126 9.92305C6.51815 8.09582 7.79988 6.53406 9.44436 5.43527C11.0888 4.33648 13.0222 3.75 15 3.75C16.9778 3.75 18.9112 4.33648 20.5557 5.43527C22.2001 6.53406 23.4819 8.09582 24.2387 9.92305C24.9956 11.7503 25.1937 13.7609 24.8079 15.7007C24.4221 17.6405 23.4697 19.4223 22.0713 20.8209V20.8209Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M17.6517 16.4017C18.3549 15.6984 18.75 14.7446 18.75 13.75C18.75 12.7554 18.3549 11.8016 17.6517 11.0983C16.9484 10.3951 15.9946 10 15 10C14.0054 10 13.0516 10.3951 12.3483 11.0983C11.6451 11.8016 11.25 12.7554 11.25 13.75C11.25 14.7446 11.6451 15.6984 12.3483 16.4017C13.0516 17.1049 14.0054 17.5 15 17.5C15.9946 17.5 16.9484 17.1049 17.6517 16.4017Z" stroke="#43A400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+											<div class="calc-mainCalc__grey">Город - </div>
+											<span class="calc-mainCalc__black">Санкт-Петербург</span>
+											<a href="#" data-popup="#regionPopup" class="calc-mainCalc__change">Изменить</a>
+										</div>
+									</div>
+								</div>
+								<div class="calc-mainCalc__button">
+									<button disabled type="submit" class="white-header__item item-whiteHeader item-whiteHeader_calc">
+										<div class="item-whiteHeader__icon">
+											<img src="img/header_calc.svg" alt="image">
+										</div>
+										<div class="item-whiteHeader__body">Расчитать</div>
+									</button>
+								</div>
+							</div>
+							<div class="calc-mainCalc__item">
+								<div class="calc-mainCalc__statuses">
+									<div class="calc-mainCalc__status">
+										<div class="calc-mainCalc__image">
+											<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M20.8694 44.9995H2.41925C1.63866 44.9995 1 44.3606 1 43.5797V31.5116C1 30.7307 1.63866 30.0918 2.41925 30.0918H20.8694C21.65 30.0918 22.2887 30.7307 22.2887 31.5116V43.5797C22.2887 44.3606 21.65 44.9995 20.8694 44.9995Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1.30273 30.6423L4.15898 24.5195C4.38961 24.0226 4.88634 23.7031 5.4363 23.7031H17.8192C18.3692 23.7031 18.8659 24.0226 19.0965 24.5195L22.0415 30.7665" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.2259 23.7031L8.80664 30.0921V34.3515H14.4836V30.0921L13.0644 23.7031" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M38.6457 8.26303C39.7456 6.41732 39.4973 4.00372 37.8651 2.42421C35.9314 0.525262 32.7736 0.525262 30.8398 2.42421C29.2077 4.00372 28.9593 6.41732 30.0593 8.26303L34.3525 14.4923L38.6457 8.26303Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M35.3644 4.96243C35.9144 5.51259 35.9144 6.41771 35.3644 6.96787C34.8145 7.51803 33.9097 7.51803 33.3597 6.96787C32.8098 6.41771 32.8098 5.51259 33.3597 4.96243C33.892 4.41226 34.7967 4.41226 35.3644 4.96243Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M30.8044 14.4746H18.386C17.02 14.4746 15.9023 15.5927 15.9023 16.9592C15.9023 18.3258 17.02 19.4438 18.386 19.4438H32.2237C39.2844 19.4438 44.9969 25.1584 44.9969 32.2218C44.9969 39.2852 39.2844 44.9998 32.2237 44.9998H25.1274" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="calc-mainCalc__label">Растояние</div>
+										<div class="calc-mainCalc__number">300 км</div>
+									</div>
+									<div class="calc-mainCalc__status">
+										<div class="calc-mainCalc__image">
+											<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M19.444 12.3546H15.1875V5.25781" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M35.0511 42.8711H15.1875" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M31.5041 30.0968H27.957V23" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 37.1934H8.09547V40.0321" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1 26.5479H2.41883" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 26.5479H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M12.3509 23.709H3.83789" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 40.0322H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="calc-mainCalc__label">Срок доставки</div>
+										<div class="calc-mainCalc__number">3 дня</div>
+									</div>
+									<div class="calc-mainCalc__status">
+										<div class="calc-mainCalc__image">
+											<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.33859 19.4694C4.77788 17.5178 3.83789 15.0516 3.83789 12.3549C3.83789 6.09195 8.92793 1 15.1885 1C21.4491 1 26.5391 6.09195 26.5391 12.3549C26.5391 18.6178 21.4491 23.7097 15.1885 23.7097" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M19.444 12.3546H15.1875V5.25781" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M13.0599 44.9993C14.2353 44.9993 15.1881 44.0461 15.1881 42.8702C15.1881 41.6944 14.2353 40.7412 13.0599 40.7412C11.8845 40.7412 10.9316 41.6944 10.9316 42.8702C10.9316 44.0461 11.8845 44.9993 13.0599 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.181 44.9993C38.3564 44.9993 39.3092 44.0461 39.3092 42.8702C39.3092 41.6944 38.3564 40.7412 37.181 40.7412C36.0056 40.7412 35.0527 41.6944 35.0527 42.8702C35.0527 44.0461 36.0056 44.9993 37.181 44.9993Z" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.9331 42.8711H6.67664C5.89628 42.8711 5.25781 42.2324 5.25781 41.4517V37.9033" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M35.0511 42.8711H15.1875" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.9839 39.3223V40.7416V41.4513C44.9839 42.2319 44.3454 42.8707 43.5651 42.8707H39.3086" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 29.3867C5.25781 34.3545 5.25781 37.9029 5.25781 37.9029" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.983 39.3225V34.9757C44.983 34.1418 44.6105 33.3257 43.9543 32.7934L40.7265 30.0966L36.2749 22.3079C35.5123 20.9773 34.1112 20.1611 32.586 20.1611H27.957" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M31.5041 30.0968H27.957V23" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M37.1795 30.0966C37.1795 27.2578 34.3418 27.9675 34.3418 27.9675V31.5159" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 37.1934H8.09547V40.0321" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1 26.5479H2.41883" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 26.5479H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M12.3509 23.709H3.83789" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M44.8422 34.3545H42.1465V37.1932H44.9841" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M5.25781 40.0322H8.09547" stroke="#43A400" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="calc-mainCalc__label">Стоимость, руб.</div>
+										<div class="calc-mainCalc__number">300 000</div>
+									</div>
+								</div>
+								<div class="calc-mainCalc__button">
+									<a href="#" class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+										<div class="item-whiteHeader__body">Оставить заявку</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="main-calc__important">
+							<div class="important-calc">
+								<div class="important-calc__container">
+									<div class="important-calc__content">
+										<div class="important-calc__head">
+											<h5 class="important-calc__title">Важная Информация!</h5>
+										</div>
+										<div class="important-calc__body">
+											<p>Насколько я понял это два состояния одной и той же формы до и после её отправки. Поэтому здесь на одной странице собраны оба.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tariffs-home tariffs-home_solo">
+				<div class="tariffs-home__container">
+					<div class="tariffs-home__head">
+						<h2 class="tariffs-home__title title-leaf">Выберите тариф</h2>
+					</div>
+					<div class="tariffs-home__body">
+						<div class="tariffs-home__item item-tariffsHome" style="--tariffColor: #666666;">
+							<div class="item-tariffsHome__title">Эконом</div>
+							<div class="item-tariffsHome__body">
+								<div class="item-tariffsHome__icon">
+									<img src="img/home_tariffs_truck.svg" alt="image">
+								</div>
+								<div class="spollers-tariffsHome__mobtitle">Эконом</div>
+								<div class="item-tariffsHome__price _roboto">от 9 100 руб.</div>
+								<div class="item-tariffsHome__advantages">
+									<div data-tariffs class="spollers-tariffsHome">
+										<div class="spollers-tariffsHome__item">
+											<button data-tariff-button="Эконом" type="button" class="spollers-tariffsHome__title">
+												<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M15 1L8 8L1 1" stroke="url(#paint0_linear_525_6793)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<defs>
+														<linearGradient id="paint0_linear_525_6793" x1="1" y1="8" x2="15" y2="8" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#FF7E01" />
+															<stop offset="1" stop-color="#FF3100" />
+														</linearGradient>
+													</defs>
+												</svg>
+												<span>Показать приемущества</span>
+											</button>
+											<div data-tariff="Эконом" data-da=".wrapper,992, last" class="spollers-tariffsHome__bg" style="--tariffColor: #666666;"></div>
+											<div data-tariff="Эконом" data-da=".wrapper,992, last" class="spollers-tariffsHome__body" style="--tariffColor: #666666;">
+												<div class="spollers-tariffsHome__mobile">
+													<div class="spollers-tariffsHome__close"></div>
+													<div class="spollers-tariffsHome__mobtitle">Эконом</div>
+													<div class="spollers-tariffsHome__mobprice _roboto">от 9 100 руб.</div>
+												</div>
+												<div class="spollers-tariffsHome__little">В стоимость входит:</div>
+												<ul class="spollers-tariffsHome__list">
+													<li class="spollers-tariffsHome__li">Доставка «подъезд - подъезд»</li>
+													<li class="spollers-tariffsHome__li">Помощь в оценке объема груза</li>
+													<li class="spollers-tariffsHome__li">Ответственность за сохранность груза</li>
+													<li class="spollers-tariffsHome__li">Возможность оплаты на выгрузке</li>
+													<li class="spollers-tariffsHome__li">Погрузка в любое время 24/7</li>
+												</ul>
+												<div class="spollers-tariffsHome__label">
+													<img src="img/home_tariffs_person.svg" alt="image">
+													<span>Возможность сопровождения <br>
+														*по согласованию.</span>
+												</div>
+												<a href="#" class="item-tariffsHome__button _mmd2dn">Заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="item-tariffsHome__button">Заказать</a>
+							</div>
+						</div>
+						<div class="tariffs-home__item item-tariffsHome" style="--tariffColor: #43A400;">
+							<div class="item-tariffsHome__title">Стандарт</div>
+							<div class="item-tariffsHome__body">
+								<div class="item-tariffsHome__icon">
+									<img src="img/home_tariffs_truck.svg" alt="image">
+								</div>
+								<div class="spollers-tariffsHome__mobtitle">Стандарт</div>
+								<div class="item-tariffsHome__price _roboto">от 15 450 руб.</div>
+								<div class="item-tariffsHome__advantages">
+									<div data-tariffs class="spollers-tariffsHome">
+										<div class="spollers-tariffsHome__item">
+											<button data-tariff-button="Стандарт" type="button" class="spollers-tariffsHome__title">
+												<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M15 1L8 8L1 1" stroke="url(#paint0_linear_525_6793)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<defs>
+														<linearGradient id="paint0_linear_525_6793" x1="1" y1="8" x2="15" y2="8" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#FF7E01" />
+															<stop offset="1" stop-color="#FF3100" />
+														</linearGradient>
+													</defs>
+												</svg>
+												<span>Показать приемущества</span>
+											</button>
+											<div data-tariff="Стандарт" data-da=".wrapper,992, last" class="spollers-tariffsHome__bg" style="--tariffColor: #43A400;"></div>
+											<div data-tariff="Стандарт" data-da=".wrapper,992, last" class="spollers-tariffsHome__body" style="--tariffColor: #43A400;">
+												<div class="spollers-tariffsHome__mobile">
+													<div class="spollers-tariffsHome__close"></div>
+													<div class="spollers-tariffsHome__mobtitle">Стандарт</div>
+													<div class="spollers-tariffsHome__mobprice _roboto">от 15 450 руб.</div>
+												</div>
+												<div class="spollers-tariffsHome__little">В стоимость входит:</div>
+												<ul class="spollers-tariffsHome__list">
+													<li class="spollers-tariffsHome__li">Доставка «подъезд - подъезд»</li>
+													<li class="spollers-tariffsHome__li">Помощь в оценке объема груза</li>
+													<li class="spollers-tariffsHome__li">Персональный менеджер 24/7</li>
+													<li class="spollers-tariffsHome__li">Отслеживание груза</li>
+													<li class="spollers-tariffsHome__li">Материальная ответственность</li>
+													<li class="spollers-tariffsHome__li">Возможность оплаты на выгрузке</li>
+													<li class="spollers-tariffsHome__li">Опломбировка кузова с грузом</li>
+													<li class="spollers-tariffsHome__li">Погрузка в любое время 24/7</li>
+												</ul>
+												<div class="spollers-tariffsHome__label">
+													<img src="img/home_tariffs_person.svg" alt="image">
+													<span>Возможность сопровождения <br>
+														*по согласованию.</span>
+												</div>
+												<a href="#" class="item-tariffsHome__button _mmd2dn">Заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="item-tariffsHome__button">Заказать</a>
+							</div>
+						</div>
+						<div class="tariffs-home__item item-tariffsHome" style="--tariffColor: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);">
+							<div class="item-tariffsHome__title">Расширенный</div>
+							<div class="item-tariffsHome__body">
+								<div class="item-tariffsHome__icon">
+									<img src="img/home_tariffs_truck.svg" alt="image">
+								</div>
+								<div class="spollers-tariffsHome__mobtitle">Расширенный</div>
+								<div class="item-tariffsHome__price _roboto">от 20 900 руб.</div>
+								<div class="item-tariffsHome__advantages">
+									<div data-tariffs class="spollers-tariffsHome">
+										<div class="spollers-tariffsHome__item">
+											<button data-tariff-button="Расширенный" type="button" class="spollers-tariffsHome__title">
+												<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M15 1L8 8L1 1" stroke="url(#paint0_linear_525_6793)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<defs>
+														<linearGradient id="paint0_linear_525_6793" x1="1" y1="8" x2="15" y2="8" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#FF7E01" />
+															<stop offset="1" stop-color="#FF3100" />
+														</linearGradient>
+													</defs>
+												</svg>
+												<span>Показать приемущества</span>
+											</button>
+											<div data-tariff="Расширенный" data-da=".wrapper,992, last" class="spollers-tariffsHome__bg" style="--tariffColor: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);"></div>
+											<div data-tariff="Расширенный" data-da=".wrapper,992, last" class="spollers-tariffsHome__body" style="--tariffColor: linear-gradient(90deg, #FF7E01 0%, #FF3100 100%);">
+												<div class="spollers-tariffHome__bg"></div>
+												<div class="spollers-tariffsHome__mobile">
+													<div class="spollers-tariffsHome__close"></div>
+													<div class="spollers-tariffsHome__mobtitle">Расширенный</div>
+													<div class="spollers-tariffsHome__mobprice _roboto">от 20 900 руб.</div>
+												</div>
+												<div class="spollers-tariffsHome__little">В стоимость входит:</div>
+												<ul class="spollers-tariffsHome__list">
+													<li class="spollers-tariffsHome__li">Доставка «подъезд - подъезд»</li>
+													<li class="spollers-tariffsHome__li">Помощь в оценке объема груза</li>
+													<li class="spollers-tariffsHome__li">Персональный менеджер 24/7</li>
+													<li class="spollers-tariffsHome__li">Отслеживание груза</li>
+													<li class="spollers-tariffsHome__li">Материальная ответственность</li>
+													<li class="spollers-tariffsHome__li">Возможность оплаты на выгрузке</li>
+													<li class="spollers-tariffsHome__li">Опломбировка кузова с грузом</li>
+													<li class="spollers-tariffsHome__li">Погрузка в любое время 24/7</li>
+													<li class="spollers-tariffsHome__li">Предоставим грузчиков</li>
+												</ul>
+												<div class="spollers-tariffsHome__label">
+													<img src="img/home_tariffs_person.svg" alt="image">
+													<span>Возможность сопровождения <br>
+														*по согласованию.</span>
+												</div>
+												<div class="spollers-tariffsHome__label">
+													<img src="img//home_tariffs_docs.svg" alt="image">
+													<span>Пакет закрывающих документов</span>
+												</div>
+												<a href="#" class="item-tariffsHome__button _mmd2dn">Заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="item-tariffsHome__button">Заказать</a>
+							</div>
+						</div>
+					</div>
+					<div class="tariffs-home__change change-tariffsHome">
+						<div class="change-tariffsHome__title">Подобрать тариф</div>
+						<a href="#" class="change-tariffsHome__item">1-комн. квартира</a>
+						<a href="#" class="change-tariffsHome__item">2-комн. квартира</a>
+						<a href="#" class="change-tariffsHome__item">3-комн. квартира</a>
+						<a href="#" class="change-tariffsHome__item">Частный дом</a>
+						<a href="#" class="change-tariffsHome__item">Частный дом</a>
+					</div>
+				</div>
+			</section>
+			<section class="important-calc">
+				<div class="important-calc__container">
+					<div class="important-calc__content">
+						<div class="important-calc__head">
+							<h5 class="important-calc__title">Важная Информация!</h5>
+						</div>
+						<div class="important-calc__body">
+							<p>Автоматический расчет на нашем сайте показывает ориентировочные ставки и не является публичной офертой! Точная стоимость рейса рассчитывается специалистом индивидуально. Просим отнестись с пониманием и не ругаться на наших менеджеров, если они назовут Вам цену, которая отличается от увиденной Вами на сайте.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="callback-from">
+				<div class="callback-from__container">
+					<div class="callback-from__content">
+						<div class="callback-from__head">
+							<div class="callback-from__logo">
+								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="image"></picture>
+							</div>
+							<h2 class="callback-from__title">Если вам или вашей семье предстоит переезд <br>
+								в другой город, то просто оставьте заявку.
+							</h2>
+						</div>
+						<div class="callback-from__button">
+							<div class="bid-home__btnwrap">
+								<a href="#" class="bid-home__button">
+									<img src="img/home_howwork_truck.svg" alt="image" class="_md3dn">
+									<span>Сделать заявку на переезд</span>
+								</a>
+							</div>
+						</div>
+						<p class="callback-from__label">Мы сделаем перевозку ваших вещей <br>
+							быстрой и безопасной</p>
+					</div>
+				</div>
+			</section>
+			<section class="reviews-home">
+				<div class="reviews-home__container_large">
+					<div class="reviews-home__head">
+						<h2 class="reviews-home__title">Отзывы наших
+							клиентов</h2>
+						<div class="reviews-home__like">
+							<img src="img/home_reviews_like.svg" alt="image">
+							<span class="_roboto">+45</span>
+						</div>
+						<a href="#" class="reviews-home__link">Все отзывы</a>
+					</div>
+					<div class="reviews-home__body">
+						<div class="reviews-home__slider swiper">
+							<div class="reviews-home__wrapper swiper-wrapper">
+								<div class="reviews-home__slide swiper-slide slide-reviewsHome">
+									<div class="slide-reviewsHome__head">
+										<div class="slide-reviewsHome__avatar">
+											<picture><source srcset="img/home_reviews_1.webp" type="image/webp"><img src="img/home_reviews_1.png" alt="image"></picture>
+										</div>
+										<div class="slide-reviewsHome__info">
+											<div class="slide-reviewsHome__name">Елена</div>
+											<div class="slide-reviewsHome__date"><span class="_roboto">05</span> Февраля <span class="_roboto">2022</span></div>
+										</div>
+									</div>
+									<div class="slide-reviewsHome__text">Был переезд Москва-Волгоград. Спасибо большущее за вашу слаженную работу! Решалось крайне быстро. Огромное спасибо менеджеру Свириденко Юлии за отношение к клиенту и к работе на все 100! Успехов!</div>
+								</div>
+								<div class="reviews-home__slide swiper-slide slide-reviewsHome">
+									<div class="slide-reviewsHome__head">
+										<div class="slide-reviewsHome__avatar">
+											<picture><source srcset="img/home_reviews_2.webp" type="image/webp"><img src="img/home_reviews_2.png" alt="image"></picture>
+										</div>
+										<div class="slide-reviewsHome__info">
+											<div class="slide-reviewsHome__name">Илья</div>
+											<div class="slide-reviewsHome__date"><span class="_roboto">05</span> Февраля <span class="_roboto">2022</span></div>
+										</div>
+									</div>
+									<div class="slide-reviewsHome__text">
+										Хочу выразить огромную благодарность Бабиной Наталье ( <span class="_roboto _roboto_regular">7 (960) 340 42 60<span>; natalya@s-pereezdom.ru), которая не только быстро и качественно подобрала нам машину под переезд из Санкт-Петербурга в Краснодар 04.02.2022, но и оперативно смогла найти замену, когда вечером перед загрузкой выяснилось, что назначенный водитель попал в аварию
+												<a href="#">Подробнее ></a>
+									</div>
+								</div>
+								<div class="reviews-home__slide swiper-slide slide-reviewsHome">
+									<div class="slide-reviewsHome__head">
+										<div class="slide-reviewsHome__avatar">
+											<picture><source srcset="img/home_reviews_1.webp" type="image/webp"><img src="img/home_reviews_1.png" alt="image"></picture>
+										</div>
+										<div class="slide-reviewsHome__info">
+											<div class="slide-reviewsHome__name">Елена</div>
+											<div class="slide-reviewsHome__date"><span class="_roboto">05</span> Февраля <span class="_roboto">2022</span></div>
+										</div>
+									</div>
+									<div class="slide-reviewsHome__text">Был переезд Москва-Волгоград. Спасибо большущее за вашу слаженную работу! Решалось крайне быстро. Огромное спасибо менеджеру Свириденко Юлии за отношение к клиенту и к работе на все 100! Успехов!</div>
+								</div>
+								<div class="reviews-home__slide swiper-slide slide-reviewsHome">
+									<div class="slide-reviewsHome__head">
+										<div class="slide-reviewsHome__avatar">
+											<picture><source srcset="img/home_reviews_2.webp" type="image/webp"><img src="img/home_reviews_2.png" alt="image"></picture>
+										</div>
+										<div class="slide-reviewsHome__info">
+											<div class="slide-reviewsHome__name">Илья</div>
+											<div class="slide-reviewsHome__date"><span class="_roboto">05</span> Февраля <span class="_roboto">2022</span></div>
+										</div>
+									</div>
+									<div class="slide-reviewsHome__text">
+										Хочу выразить огромную благодарность Бабиной Наталье ( <span class="_roboto _roboto_regular">7 (960) 340 42 60<span>; natalya@s-pereezdom.ru), которая не только быстро и качественно подобрала нам машину под переезд из Санкт-Петербурга в Краснодар 04.02.2022, но и оперативно смогла найти замену, когда вечером перед загрузкой выяснилось, что назначенный водитель попал в аварию
+												<a href="#">Подробнее ></a>
+									</div>
+								</div>
+							</div>
+							<div class="reviews-home__pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="info-services">
+				<div class="info-services__container">
+					<div class="info-services__phones">
+						<div class="info-services__icon">
+							<img src="img/header_time.svg" alt="image">
+						</div>
+						<div class="info-services__item">
+							<a href="#" class="info-services__link info-services__link_bold _roboto">8 (800) 301-47-97</a>
+							<span class="info-services__time">c 8:00 до 21:00, ежедневно</span>
+						</div>
+						<div class="info-services__item">
+							<a href="#" class="info-services__link _roboto _roboto_regular">8 (969) 777-83-97</a>
+						</div>
+					</div>
+					<div class="info-services__bid">
+						<a href="#" class="white-header__item item-whiteHeader item-whiteHeader_calc _redgrad">
+							<div class="item-whiteHeader__icon">
+								<img src="img/header_calc.svg" alt="image">
+							</div>
+							<div class="item-whiteHeader__body">Оставить заявку</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__row logo-footer">
+						<a href="#" class="logo-footer__link">
+							<picture><source srcset="img/logo_footer.webp" type="image/webp"><img src="img/logo_footer.png" alt="image"></picture>
+						</a>
+					</div>
+					<div class="footer__row socials-footer">
+						<div class="mobile-blackHeader__socials">
+							<a href="#" class="mobile-blackHeader__social">
+								<img src="img/footer_vk.svg" alt="image">
+							</a>
+							<a href="#" class="mobile-blackHeader__social">
+								<img src="img/footer_ok.svg" alt="image">
+							</a>
+							<a href="#" class="mobile-blackHeader__social">
+								<img src="img/footer_inst.svg" alt="image">
+							</a>
+						</div>
+					</div>
+					<div class="footer__row contacts-footer">
+						<div class="contacts-footer__address">Россия, 413100, Энгельс, ул. Демократическая, д.1, офис 201/1</div>
+						<div class="mobile-blackHeader__contacts">
+							<a href="tel:88003014797" class="mobile-blackHeader__phone mobile-blackHeader__phone_fw _roboto">8 (800) 301-47-97</a>
+							<a href="tel:89697778397" class="mobile-blackHeader__phone _roboto _roboto_regular">8 (969) 777-83-97</a>
+							<a href="mailto:info@s-pereezdom.ru" class="mobile-blackHeader__mail">info@s-pereezdom.ru</a>
+						</div>
+					</div>
+					<div data-spollers="992" class="footer__row tags-footer">
+						<div data-spoller class="tags-footer__head">Наименование категории</div>
+						<div class="tags-footer__body">
+							<a href="#" class="tags-footer__item">Домашний переезд</a>
+							<a href="#" class="tags-footer__item">Квартирный переезд с грузчиками по РФ</a>
+							<a href="#" class="tags-footer__item">Переезды для военнослужащих</a>
+							<a href="#" class="tags-footer__item">Офисные переезды</a>
+							<a href="#" class="tags-footer__item">Корпоративный переезд сотрудников</a>
+						</div>
+					</div>
+					<div data-spollers="992" class="footer__row spollers-footer">
+						<div class="spollers-footer__item">
+							<a href="#" data-spoller class="spollers-footer__title">О Компании</a>
+							<div class="spollers-footer__body">
+								<ul>
+									<li><a href="#">
+											Сотрудники
+										</a></li>
+									<li><a href="#">
+											Полезная информация
+										</a></li>
+									<li><a href="#">
+											Отзывы
+										</a></li>
+									<li><a href="#">
+											Документы
+										</a></li>
+									<li><a href="#">
+											Контакты
+										</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="spollers-footer__item">
+							<a href="#" data-spoller class="spollers-footer__title">Сервис</a>
+							<div class="spollers-footer__body">
+								<ul>
+									<li><a href="#">
+											Услуги
+										</a></li>
+									<li><a href="#">
+											Цены
+										</a></li>
+									<li><a href="#">
+											Автопарк
+										</a></li>
+									<li><a href="#">
+											Отследить груз
+										</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-spollers="992" class="footer__row tags-footer">
+						<div data-spoller class="tags-footer__head">Наименование категории</div>
+						<div class="tags-footer__body">
+							<a href="#" class="tags-footer__item">Переезд в Москву</a>
+							<a href="#" class="tags-footer__item">Переезд в Санкт-Петербург</a>
+							<a href="#" class="tags-footer__item">Переезд в Краснодар</a>
+							<a href="#" class="tags-footer__item">Переезд в Беларусь</a>
+							<a href="#" class="tags-footer__item">Переезд в Калининград</a>
+							<a href="#" class="tags-footer__item">Переезд в Абхазию</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<span>2009 ©</span>
+					<span>С переездом!</span>
+					<a href="#" class="_md4dn">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+		<div data-goto=".wrapper" data-ontop="150" class="_ontop">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8 7L12 3M12 3L16 7M12 3V21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div id="regionPopup" aria-hidden="true" class="popup regionPopup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+							<defs>
+								<path id="avzva" d="M691.485 160.07l-1.414 1.415-7.071-7.071-7.071 7.071-1.414-1.414 7.07-7.071-7.07-7.071 1.414-1.415 7.07 7.071 7.072-7.07 1.414 1.414-7.07 7.07z" />
+							</defs>
+							<g>
+								<g transform="translate(-674 -144)">
+									<use fill="#000" xlink:href="#avzva" />
+								</g>
+							</g>
+						</svg>
+					</button>
+					<div class="popup__text regionPopup__content content-regionPopup">
+						<div class="content-regionPopup__title">
+							Регион
+						</div>
+						<div class="content-regionPopup__search">
+							<input autocomplete="off" type="text" name="form[]" placeholder="Введите регион или город" class="content-regionPopup__input">
+							<div class="content-regionPopup__loopa">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#C5C0DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M20.9999 21L16.6499 16.65" stroke="#C5C0DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="content-regionPopup__popular popular-regionPopup">
+							<div class="letters-regionPopup">
+								<div class="letters-regionPopup__item"><input type="radio" checked name="letter-regionPopup" id="letters-regionPopup__input_1" data-letter="А" class="letters-regionPopup__input"><label for="letters-regionPopup__input_1" class="letters-regionPopup__label">А</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_2" data-letter="Б" class="letters-regionPopup__input"><label for="letters-regionPopup__input_2" class="letters-regionPopup__label">Б</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_3" data-letter="В" class="letters-regionPopup__input"><label for="letters-regionPopup__input_3" class="letters-regionPopup__label">В</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_4" data-letter="Г" class="letters-regionPopup__input"><label for="letters-regionPopup__input_4" class="letters-regionPopup__label">Г</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_5" data-letter="Д" class="letters-regionPopup__input"><label for="letters-regionPopup__input_5" class="letters-regionPopup__label">Д</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_6" data-letter="Е" class="letters-regionPopup__input"><label for="letters-regionPopup__input_6" class="letters-regionPopup__label">Е</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_7" data-letter="Ж" class="letters-regionPopup__input"><label for="letters-regionPopup__input_7" class="letters-regionPopup__label">Ж</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_8" data-letter="З" class="letters-regionPopup__input"><label for="letters-regionPopup__input_8" class="letters-regionPopup__label">З</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_9" data-letter="И" class="letters-regionPopup__input"><label for="letters-regionPopup__input_9" class="letters-regionPopup__label">И</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_10" data-letter="К" class="letters-regionPopup__input"><label for="letters-regionPopup__input_10" class="letters-regionPopup__label">К</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_11" data-letter="Л" class="letters-regionPopup__input"><label for="letters-regionPopup__input_11" class="letters-regionPopup__label">Л</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_12" data-letter="М" class="letters-regionPopup__input"><label for="letters-regionPopup__input_12" class="letters-regionPopup__label">М</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_13" data-letter="Н" class="letters-regionPopup__input"><label for="letters-regionPopup__input_13" class="letters-regionPopup__label">Н</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_14" data-letter="О" class="letters-regionPopup__input"><label for="letters-regionPopup__input_14" class="letters-regionPopup__label">О</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_15" data-letter="П" class="letters-regionPopup__input"><label for="letters-regionPopup__input_15" class="letters-regionPopup__label">П</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_16" data-letter="Р" class="letters-regionPopup__input"><label for="letters-regionPopup__input_16" class="letters-regionPopup__label">Р</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_17" data-letter="С" class="letters-regionPopup__input"><label for="letters-regionPopup__input_17" class="letters-regionPopup__label">С</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_18" data-letter="Т" class="letters-regionPopup__input"><label for="letters-regionPopup__input_18" class="letters-regionPopup__label">Т</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_19" data-letter="У" class="letters-regionPopup__input"><label for="letters-regionPopup__input_19" class="letters-regionPopup__label">У</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_20" data-letter="Ф" class="letters-regionPopup__input"><label for="letters-regionPopup__input_20" class="letters-regionPopup__label">Ф</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_21" data-letter="Х" class="letters-regionPopup__input"><label for="letters-regionPopup__input_21" class="letters-regionPopup__label">Х</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_22" data-letter="Ц" class="letters-regionPopup__input"><label for="letters-regionPopup__input_22" class="letters-regionPopup__label">Ц</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_23" data-letter="Ч" class="letters-regionPopup__input"><label for="letters-regionPopup__input_23" class="letters-regionPopup__label">Ч</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_24" data-letter="Ш" class="letters-regionPopup__input"><label for="letters-regionPopup__input_24" class="letters-regionPopup__label">Ш</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_25" data-letter="Щ" class="letters-regionPopup__input"><label for="letters-regionPopup__input_25" class="letters-regionPopup__label">Щ</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_26" data-letter="Э" class="letters-regionPopup__input"><label for="letters-regionPopup__input_26" class="letters-regionPopup__label">Э</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_27" data-letter="Ю" class="letters-regionPopup__input"><label for="letters-regionPopup__input_27" class="letters-regionPopup__label">Ю</label></div>
+								<div class="letters-regionPopup__item"><input type="radio" name="letter-regionPopup" id="letters-regionPopup__input_28" data-letter="Я" class="letters-regionPopup__input"><label for="letters-regionPopup__input_28" class="letters-regionPopup__label">Я</label></div>
+							</div>
+						</div>
+						<div data-simplebar class="content-regionPopup__body body-regionPopup">
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">А</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Б</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">В</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Д</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Е</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">З</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">И</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">К</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Л</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">М</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Н</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">О</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Р</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">С</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Т</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">У</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Х</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Ч</div>
+								<div class="section-regionPopup__body">
+
+								</div>
+							</div>
+							<div class="body-regionPopup__section section-regionPopup">
+								<div class="section-regionPopup__title">Я</div>
+								<div class="section-regionPopup__body">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="callbackPopup" aria-hidden="true" class="popup callbackPopup">
+			<div class="popup__wrapper callbackPopup__warpper">
+				<div class="popup__content callbackPopup__content">
+					<button data-close type="button" class="popup__close callbackPopup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+							<defs>
+								<path id="avzva" d="M691.485 160.07l-1.414 1.415-7.071-7.071-7.071 7.071-1.414-1.414 7.07-7.071-7.07-7.071 1.414-1.415 7.07 7.071 7.072-7.07 1.414 1.414-7.07 7.07z" />
+							</defs>
+							<g>
+								<g transform="translate(-674 -144)">
+									<use fill="#000" xlink:href="#avzva" />
+								</g>
+							</g>
+						</svg>
+					</button>
+					<div class="popup__text callbackPopup__text">
+						<form action="" class="callbackPopup__form form-callbackPopup">
+							<div class="form-callbackPopup__head">
+								<h2 class="form-callbackPopup__title">Отправить заявку</h2>
+								<p>Наши специалисты свяжутся с Вами в ближайшее время</p>
+							</div>
+							<div class="form-callbackPopup__body">
+								<div class="form-callbackPopup__row">
+									<input data-required type="text" name="" id="" placeholder="Имя" class="form-callbackPopup__input">
+								</div>
+								<div class="form-callbackPopup__row">
+									<input data-required type="text" data-inputmask="'alias':'+7 (999) 999-99-99'" placeholder="Телефон" name="" id="" class="form-callbackPopup__input">
+								</div>
+								<div class="form-callbackPopup__row">
+									<input data-required type="text" name="" id="" data-inputmask="'mask':'email'" placeholder="Email" class="form-callbackPopup__input">
+								</div>
+								<div class="form-callbackPopup__row">
+									<textarea placeholder="Комментарий" class="form-callbackPopup__textarea"></textarea>
+								</div>
+							</div>
+							<div class="form-callbackPopup__agree">
+								<input checked type="checkbox" name="" id="123456" class="form-callbackPopup__checkbox">
+								<label for="123456" class="form-callbackPopup__ageelabel"><span>Я согласен(а) на
+										<a href="#">обработку персональных данных</a></span></label>
+							</div>
+							<button type="submit" class="form-callbackPopup__submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220903104736"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20220903104736"></script>
+</body>
+
+</html>

@@ -348,3 +348,67 @@
     &:not(:last-child) {margin-bottom: rem(27);}
   }
 }
+
+//========================================================================================================================================================
+
+.payments-material {
+  @include adaptiveValue("margin-bottom", 80, 12);
+
+  &__container {
+  }
+
+  &__head {
+    margin-bottom: rem(22);
+  }
+
+  &__title {
+    font-size: rem(24);
+    line-height: math.div(32 , 24);
+  }
+
+  &__body {
+    display: grid;
+    @include adaptiveValue("gap", 55, 0, 1920, 480, 1);
+    @media (min-width:$mobile){
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, rem(280));
+    }
+  }
+
+  &__item {
+    @include adaptiveValue("min-height", 320, 140, 1920, 480, 1);
+    padding: rem(20) rem(30);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;align-items: center;
+    gap: rem(10);
+    border-radius: rem(30);
+    border: 1px solid rgba(67, 164, 0, 0.2);
+    @media (max-width:$mobile){
+      align-items: flex-start;
+      gap: rem(15);
+      border-radius: rem(15);
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    @include adaptiveValue("width", 120, 57, 1920, 480, 1);
+    @include adaptiveValue("height", 95, 45, 1920, 480, 1);
+    display: flex;
+    justify-content:center;align-items: center;
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    line-height: math.div(26 , 18);
+    font-size: rem(18);
+    @media (min-width:$mobile){
+      color: #43A400;
+    }
+  }
+}
